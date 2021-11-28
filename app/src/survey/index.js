@@ -26,6 +26,7 @@ const Box = styled.div`
   display: flex;
   flex-direction: column;
   flex: 1;
+  max-width: 280px;
 `;
 
 const Title = styled.div`
@@ -46,13 +47,15 @@ function Survey() {
   const styles = {
     row: {
       marginBottom: 40,
+      //   marginLeft: 20,
     },
   };
   return (
     <Wrapper>
       <Heading>Please select your preferred genre</Heading>
-      <Row style={styles.row}>
-        <Col>
+      {/* <Row className="d-flex justify-content-center"> */}
+      <Row className="row justify-content-evenly">
+        <Col className="col-3">
           <Box>
             <Title>Action</Title>
             <ImageContainer>
@@ -60,11 +63,21 @@ function Survey() {
             </ImageContainer>
           </Box>
         </Col>
-        <Col>
-          <Box>{/* code here for drama */}</Box>
+        <Col className="col-3">
+          <Box>
+            <Title>Action</Title>
+            <ImageContainer>
+              <Image src={ActionImg} />
+            </ImageContainer>
+          </Box>
         </Col>
-        <Col>
-          <Box>{/* code here for fantasy */}</Box>
+        <Col className="col-3">
+          <Box>
+            <Title>Action</Title>
+            <ImageContainer>
+              <Image src={ActionImg} />
+            </ImageContainer>
+          </Box>
         </Col>
       </Row>
       {/* <Row style={styles.row}>
