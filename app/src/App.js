@@ -1,11 +1,17 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import './App.css';
-import Login from './login/index';
+import Login from "./login/index";
+import SignUp  from "./signup/index";
+import Survey from "./survey/index";
 
 function App() {
   return (
     <div>
-    <Login/>
+      <Router>
+        <Route exact path="/" component={Login} />
+        <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/survey" component={Survey} />
+      </Router>
     </div>
   );
 }
