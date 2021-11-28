@@ -55,8 +55,7 @@ function Survey() {
   return (
     <Wrapper>
       <Heading>Please select your preferred genre</Heading>
-      {/* <Row className="d-flex justify-content-center"> */}
-      <Row className="row justify-content-evenly">
+      <Row style={styles.row} className="row justify-content-evenly">
         <Col className="col-3">
           <Box>
             <Title>Action</Title>
@@ -82,7 +81,7 @@ function Survey() {
           </Box>
         </Col>
       </Row>
-      <Row className="row justify-content-evenly">
+      <Row style={styles.row} className="row justify-content-evenly">
         <Col className="col-3">
           <Box>
             <Title>SF</Title>
