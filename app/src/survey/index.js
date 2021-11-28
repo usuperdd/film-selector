@@ -58,24 +58,13 @@ function Survey() {
             <ImageContainer>
               <Image src={ActionImg} />
             </ImageContainer>
-            {/* <Image src={ActionImg} /> */}
-            {/* <ImageContainer><Image src={ActionImg} /></ImageContainer> */}
-            {/* <Image src={ActionImg}/> */}
-
-            {/* <Image src={ActionImg}/>  */}
           </Box>
         </Col>
         <Col>
-          <Box>
-            {/* Drama
-                        <Image src={DramaImg}/> */}
-          </Box>
+          <Box>{/* code here for drama */}</Box>
         </Col>
         <Col>
-          <Box>
-            {/* Fantasy
-                        <Image src={FantasyImg}/> */}
-          </Box>
+          <Box>{/* code here for fantasy */}</Box>
         </Col>
       </Row>
       {/* <Row style={styles.row}>
