@@ -6,9 +6,8 @@ import ActionImg from "../images/action.jpeg";
 import DramaImg from "../images/drama.jpeg";
 import FantasyImg from "../images/fantasy.jpeg";
 import SFImg from "../images/sf.jpeg";
-import LomanceImg from "../images/lomance.jpeg";
+import RomanceImg from "../images/romance.jpeg";
 import ComedyImg from "../images/comedy.jpeg";
-
 
 const Wrapper = styled.div`
   /* height: 100vh;   */
@@ -66,39 +65,21 @@ function Survey() {
             </ImageContainer>
           </Box>
         </Col>
-<<<<<<< HEAD
-        <Col>
+        <Col className="col-3">
           <Box>
             <Title>Drama</Title>
             <ImageContainer>
-                <Image src={DramaImg} />
-              </ImageContainer>              
-            </Box>
-        </Col>
-        <Col>
-          <Box>
-          <Title>Fantasy</Title>
-            <ImageContainer>
-                <Image src={FantasyImg} />
-              </ImageContainer>          
-        </Box>
-=======
-        <Col className="col-3">
-          <Box>
-            <Title>Action</Title>
-            <ImageContainer>
-              <Image src={ActionImg} />
+              <Image src={DramaImg} />
             </ImageContainer>
           </Box>
         </Col>
         <Col className="col-3">
           <Box>
-            <Title>Action</Title>
+            <Title>Fantasy</Title>
             <ImageContainer>
-              <Image src={ActionImg} />
+              <Image src={FantasyImg} />
             </ImageContainer>
           </Box>
->>>>>>> b63a8b0aa75d47e7738defc50f55bb677ffa5dbf
         </Col>
       </Row>
       <Row style={styles.row}>
@@ -114,20 +95,19 @@ function Survey() {
           <Box>
             <Title>Comedy</Title>
             <ImageContainer>
-                <Image src={ComedyImg} />
-              </ImageContainer>              
-            </Box>
+              <Image src={ComedyImg} />
+            </ImageContainer>
+          </Box>
         </Col>
         <Col>
           <Box>
-          <Title>Lomance</Title>
+            <Title>Romance</Title>
             <ImageContainer>
-                <Image src={LomanceImg} />
-              </ImageContainer>          
-        </Box>
+              <Image src={RomanceImg} />
+            </ImageContainer>
+          </Box>
         </Col>
       </Row>
-      
     </Wrapper>
   );
 }
