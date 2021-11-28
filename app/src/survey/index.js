@@ -82,8 +82,8 @@ function Survey() {
           </Box>
         </Col>
       </Row>
-      <Row style={styles.row}>
-        <Col>
+      <Row className="row justify-content-evenly">
+        <Col className="col-3">
           <Box>
             <Title>SF</Title>
             <ImageContainer>
@@ -91,7 +91,7 @@ function Survey() {
             </ImageContainer>
           </Box>
         </Col>
-        <Col>
+        <Col className="col-3">
           <Box>
             <Title>Comedy</Title>
             <ImageContainer>
@@ -99,7 +99,7 @@ function Survey() {
             </ImageContainer>
           </Box>
         </Col>
-        <Col>
+        <Col className="col-3">
           <Box>
             <Title>Romance</Title>
             <ImageContainer>
