@@ -5,7 +5,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import ActionImg from "../images/action.jpeg";
 import DramaImg from "../images/drama.jpeg";
 import FantasyImg from "../images/fantasy.jpeg";
-import ScienceFiction from "../images/sf.jpeg";
+import SFImg from "../images/sf.jpeg";
+import LomanceImg from "../images/lomance.jpeg";
+import ComedyImg from "../images/comedy.jpeg";
+
 
 const Wrapper = styled.div`
   /* height: 100vh;   */
@@ -61,25 +64,49 @@ function Survey() {
           </Box>
         </Col>
         <Col>
-          <Box>{/* code here for drama */}</Box>
+          <Box>
+            <Title>Drama</Title>
+            <ImageContainer>
+                <Image src={DramaImg} />
+              </ImageContainer>              
+            </Box>
         </Col>
         <Col>
-          <Box>{/* code here for fantasy */}</Box>
+          <Box>
+          <Title>Fantasy</Title>
+            <ImageContainer>
+                <Image src={FantasyImg} />
+              </ImageContainer>          
+        </Box>
         </Col>
       </Row>
-      {/* <Row style={styles.row}>
-                <Col>
-                    <Box>
-                        SF
-                        <Image src={ScienceFiction}/>
-                    </Box>
-                </Col>
-                <Col>
-                </Col>
-                <Col>
-                </Col>
-            </Row>
-           */}
+      <Row style={styles.row}>
+        <Col>
+          <Box>
+            <Title>SF</Title>
+            <ImageContainer>
+              <Image src={SFImg} />
+            </ImageContainer>
+          </Box>
+        </Col>
+        <Col>
+          <Box>
+            <Title>Comedy</Title>
+            <ImageContainer>
+                <Image src={ComedyImg} />
+              </ImageContainer>              
+            </Box>
+        </Col>
+        <Col>
+          <Box>
+          <Title>Lomance</Title>
+            <ImageContainer>
+                <Image src={LomanceImg} />
+              </ImageContainer>          
+        </Box>
+        </Col>
+      </Row>
+      
     </Wrapper>
   );
 }
