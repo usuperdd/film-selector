@@ -8,6 +8,10 @@ import FantasyImg from "../images/fantasy.jpeg";
 import SFImg from "../images/sf.jpeg";
 import RomanceImg from "../images/romance.jpeg";
 import ComedyImg from "../images/comedy.jpeg";
+import HorrorImg from "../images/horror.jpeg";
+import SportsImg from "../images/sports.jpeg";
+import AnimationImg from "../images/animation.jpeg";
+
 
 const Wrapper = styled.div`
   /* height: 100vh;   */
@@ -81,6 +85,7 @@ function Survey() {
           </Box>
         </Col>
       </Row>
+      
       <Row style={styles.row} className="row justify-content-evenly">
         <Col className="col-3">
           <Box>
@@ -103,6 +108,33 @@ function Survey() {
             <Title>Romance</Title>
             <ImageContainer>
               <Image src={RomanceImg} />
+            </ImageContainer>
+          </Box>
+        </Col>
+      </Row>
+
+      <Row style={styles.row} className="row justify-content-evenly">
+        <Col className="col-3">
+          <Box>
+            <Title>Horror</Title>
+            <ImageContainer>
+              <Image src={HorrorImg} />
+            </ImageContainer>
+          </Box>
+        </Col>
+        <Col className="col-3">
+          <Box>
+            <Title>Sports</Title>
+            <ImageContainer>
+              <Image src={SportsImg} />
+            </ImageContainer>
+          </Box>
+        </Col>
+        <Col className="col-3">
+          <Box>
+            <Title>Animation</Title>
+            <ImageContainer>
+              <Image src={AnimationImg} />
             </ImageContainer>
           </Box>
         </Col>
