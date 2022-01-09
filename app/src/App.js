@@ -1,8 +1,12 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import './App.css';
+import "./App.css";
 import Login from "./login/index";
-import SignUp  from "./signup/index";
+import SignUp from "./signup/index";
 import Survey from "./survey/index";
+import Main from "./main/index";
+import Community from "./community/index"
+import Post from "./post/index"
+import PostDetails from "./post/index"
 
 function App() {
   return (
@@ -11,6 +15,10 @@ function App() {
         <Route exact path="/" component={Login} />
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/survey" component={Survey} />
+        <Route exact path="/main" component={Main} />
+        <Route exact path="/community" component={Community} />
+        <Route exact path="/post" component={Post} />
+        <Route exact path="/postDetails" component={PostDetails} />
       </Router>
     </div>
   );
