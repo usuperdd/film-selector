@@ -6,7 +6,7 @@ import Survey from "./survey/index";
 import Main from "./main/index";
 import Community from "./community/index"
 import Post from "./post/index"
-import PostDetails from "./post/index"
+import PostDetails from "./postDetails/index"
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
         <Route exact path="/main" component={Main} />
         <Route exact path="/community" component={Community} />
         <Route exact path="/post" component={Post} />
-        <Route exact path="/postDetails" component={PostDetails} />
+        <Route exact path="/details" component={PostDetails} />
       </Router>
     </div>
   );
