@@ -44,6 +44,33 @@ margin-left: auto;
 /* height: 100vh; */
 `;
 
+const MainContainer = styled.div`
+border-top: 10px solid #C167FF;
+border-left: 1px solid #C167FF;
+border-right: 1px solid #C167FF;
+border-bottom: 1px solid #C167FF;
+padding: 10px;
+color:white;
+margin-bottom: 20px;
+`;
+
+const TitleInput = styled.input`
+background-color: transparent;
+width: 100%;
+border: none;
+border-bottom: 1px solid #C167FF;
+color:white;
+`;
+
+const ContentsInput = styled.textarea`
+background-color: #1D3456;
+width: 100%;
+border: none;
+min-height: 500px;
+height: 100%;
+color:white;
+`;
+
 
 function PostDetails() {
     
@@ -57,7 +84,11 @@ function PostDetails() {
         </Header>
   
         <Body>
-       
+        <MainContainer>
+            <TitleInput placeholder="Title"/>
+              <TitleInput div="Writer | Date"/>
+             <ContentsInput div="Views | Recommendation | Comment"/>
+        </MainContainer>
         </Body>
       </Wrapper>
     );
