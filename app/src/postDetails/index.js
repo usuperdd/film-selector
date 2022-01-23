@@ -8,7 +8,7 @@ import FooterImg from "../images/footer.jpeg";
 import ProfileImg from "../images/profile.png";
 
 const Wrapper = styled.div`
-  height: 100vh;
+  height: 100%;
   background-color: #001f3f;
   
 `;
@@ -21,7 +21,6 @@ const Header = styled.div`
   align-items: center;
   padding: 10px;
   padding-right: 50px;
-
 
 `;
 
@@ -52,23 +51,17 @@ border-bottom: 1px solid #C167FF;
 padding: 10px;
 color:white;
 margin-bottom: 20px;
+height: 600px;
 `;
 
-const TitleInput = styled.input`
-background-color: transparent;
-width: 100%;
-border: none;
+const Heading = styled.div`
+
+margin-right: 15px;
+
+`;
+const Heading2 = styled.div`
+margin-right: 15px;
 border-bottom: 1px solid #C167FF;
-color:white;
-`;
-
-const ContentsInput = styled.textarea`
-background-color: #1D3456;
-width: 100%;
-border: none;
-min-height: 500px;
-height: 100%;
-color:white;
 `;
 
 
@@ -78,18 +71,16 @@ function PostDetails() {
     return (
       <Wrapper>
         <Header>
-          
-            <UsernameImage src={ProfileImg} />
-     
+          <UsernameImage src={ProfileImg} />
         </Header>
-  
+
         <Body>
         <MainContainer>
-            <TitleInput placeholder="Title"/>
-              <TitleInput div="Writer | Date"/>
-             <ContentsInput div="Views | Recommendation | Comment"/>
+            <Heading>Title</Heading>
+            <Heading>Writer | Date</Heading>
+            <Heading2>Views | Recommendation | Comments</Heading2>
         </MainContainer>
-        </Body>
+            </Body>
       </Wrapper>
     );
   }
