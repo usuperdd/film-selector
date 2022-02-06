@@ -4,9 +4,10 @@ import Login from "./login/index";
 import SignUp from "./signup/index";
 import Survey from "./survey/index";
 import Main from "./main/index";
-import Community from "./community/index"
-import Post from "./post/index"
-import PostDetails from "./postDetails/index"
+import Community from "./community/index";
+import Post from "./post/index";
+import PostDetails from "./postDetails/index";
+import MovieDetails from "./movieDetails";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route exact path="/community" component={Community} />
         <Route exact path="/post" component={Post} />
         <Route exact path="/details" component={PostDetails} />
+        <Route exact path="/movie" component={MovieDetails} />
       </Router>
     </div>
   );
