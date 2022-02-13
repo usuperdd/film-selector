@@ -22,15 +22,8 @@ const Header = styled.div`
   padding-right: 50px;
 `;
 
-const ScenarioContainer = styled.div`
-  margin-top: -5px;
-  border-left: 2px solid #c167ff;
-  border-right: 1px solid #c167ff;
-  border-bottom: 1px solid #c167ff;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  padding: 40px;
+const ScenarioContainer = styled.hr`
+  border-top: 4px solid #c167ff;
 `;
 
 const MainImage = styled.img`
@@ -49,9 +42,7 @@ function MovieDetails() {
       <BodyContainer>
         <MainImage src={SkywalkersagaImg} />
       </BodyContainer>
-      <ScenarioContainer>
-
-      </ScenarioContainer>
+      <ScenarioContainer />
     </Wrapper>
   );
 }
