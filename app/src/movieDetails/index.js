@@ -22,7 +22,7 @@ const Header = styled.div`
   padding-right: 50px;
 `;
 
-const ScenarioContainer = styled.hr`
+const ScenarioContainer = styled.div`
   border-top: 4px solid #c167ff;
 `;
 
