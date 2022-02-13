@@ -4,6 +4,7 @@ import { Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import FooterImg from "../images/footer.jpeg";
+import RoundedsquareImg from "../images/roundedsquare.png";
 import SkywalkersagaImg from "../images/skywalkersaga.jpeg";
 import PrevImg from "../images/back.jpeg";
 
@@ -30,6 +31,10 @@ const MainImage = styled.img`
   width: 500px;
   height: 500px;
 `;
+const SubImage = styled.img`
+  width: 100px;
+  height: 50px;
+`;
 const BodyContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -42,7 +47,12 @@ function MovieDetails() {
       <BodyContainer>
         <MainImage src={SkywalkersagaImg} />
       </BodyContainer>
-      <ScenarioContainer />
+      <ScenarioContainer>
+      </ScenarioContainer>
+      <SubImage src={RoundedsquareImg} />
+      
+
+
     </Wrapper>
   );
 }
