@@ -10,8 +10,6 @@ import PrevImg from "../images/back.jpeg";
 const Wrapper = styled.div`
   height: 100vh;
   background-color: #001f3f;
-apptart
-
 `;
 
 const Header = styled.div`
@@ -24,34 +22,24 @@ const Header = styled.div`
   padding-right: 50px;
 `;
 
-const UsernameImage1 = styled.img`
-  width: 50px;
-  height: 50px;
-  margin-left: auto;
-`;
-
-const UsernameImage2 = styled.img`
+const MainImage = styled.img`
   width: 500px;
   height: 500px;
-
- 
 `;
-const Columnmid = styled.div`
-margin-top: 0px;
-width: 500px;
-height: 800px;
-z-index: 1;
+const BodyContainer = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 function MovieDetails() {
-  return <Wrapper>
-    <Header>
-    <UsernameImage1 src={FooterImg} />
-</Header>
-    <Columnmid>
-    <UsernameImage2 src={SkywalkersagaImg} />
-    </Columnmid>
-  </Wrapper>;
+  return (
+    <Wrapper>
+      <Header></Header>
+      <BodyContainer>
+        <MainImage src={SkywalkersagaImg} />
+      </BodyContainer>
+    </Wrapper>
+  );
 }
 
 export default MovieDetails;
