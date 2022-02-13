@@ -7,6 +7,7 @@ import FooterImg from "../images/footer.jpeg";
 import ProfileImg from "../images/profile.png";
 import EmailImg from "../images/email.jpeg";
 
+
 const Wrapper = styled.div`
   height: 100%;
   background-color: #001f3f;
