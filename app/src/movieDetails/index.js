@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import FooterImg from "../images/footer.jpeg";
 import RoundedsquareImg from "../images/roundedsquare.png";
 import SkywalkersagaImg from "../images/skywalkersaga.jpeg";
+import TriangleImg from "../images/triangle.png";
 import PrevImg from "../images/back.jpeg";
 
 const Wrapper = styled.div`
@@ -23,18 +24,17 @@ const Header = styled.div`
   padding-right: 50px;
 `;
 
-const ScenarioContainer = styled.div`
+const ScenarioContainer = styled.hr`
   border-top: 4px solid #c167ff;
-  margin-top: 10px;
 `;
 
 const MainImage = styled.img`
-  width: 500px;
+  width: git500px;
   height: 500px;
 `;
 const SubImage = styled.img`
-  width: 100px;
-  height: 50px;
+  width: 200px;
+  height: 100px;
 `;
 const BodyContainer = styled.div`
   display: flex;
@@ -48,8 +48,12 @@ function MovieDetails() {
       <BodyContainer>
         <MainImage src={SkywalkersagaImg} />
       </BodyContainer>
-      <ScenarioContainer></ScenarioContainer>
+      <ScenarioContainer>
+      </ScenarioContainer>
       <SubImage src={RoundedsquareImg} />
+      
+
+
     </Wrapper>
   );
 }
