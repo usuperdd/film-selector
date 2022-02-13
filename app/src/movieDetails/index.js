@@ -25,6 +25,7 @@ const Header = styled.div`
 
 const ScenarioContainer = styled.div`
   border-top: 4px solid #c167ff;
+  margin-top: 10px;
 `;
 
 const MainImage = styled.img`
@@ -47,12 +48,8 @@ function MovieDetails() {
       <BodyContainer>
         <MainImage src={SkywalkersagaImg} />
       </BodyContainer>
-      <ScenarioContainer>
-      </ScenarioContainer>
+      <ScenarioContainer></ScenarioContainer>
       <SubImage src={RoundedsquareImg} />
-      
-
-
     </Wrapper>
   );
 }
