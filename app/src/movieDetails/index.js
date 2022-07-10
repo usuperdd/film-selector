@@ -48,12 +48,8 @@ function MovieDetails() {
       <BodyContainer>
         <MainImage src={SkywalkersagaImg} />
       </BodyContainer>
-      <ScenarioContainer>
-      </ScenarioContainer>
-      <SubImage src={RoundedsquareImg} />
-      
-
-
+      <ScenarioContainer></ScenarioContainer>
+      {/* <SubImage src={RoundedsquareImg} /> */}
     </Wrapper>
   );
 }
