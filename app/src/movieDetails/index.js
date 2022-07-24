@@ -54,7 +54,7 @@ function MovieDetails() {
       {/* <SubImage src={RoundedsquareImg} /> */}
       <DropdownButton id="dropdown-basic-button" title="Add">
         <Dropdown.Item name="episode" href="#/action-1">
-          Person
+          d
         </Dropdown.Item>
         <Dropdown.Item href="#/action-2">Group</Dropdown.Item>
         <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
