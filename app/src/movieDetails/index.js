@@ -52,12 +52,13 @@ function MovieDetails() {
       </BodyContainer>
       <ScenarioContainer></ScenarioContainer>
       {/* <SubImage src={RoundedsquareImg} /> */}
-      <DropdownButton id="dropdown-basic-button" title="Add">
+      <DropdownButton id="dropdown-basic-button" title="episode">
         <Dropdown.Item name="episode" href="#/action-1">
-          d
+          dc=
         </Dropdown.Item>
-        <Dropdown.Item href="#/action-2">Group</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        <Dropdown.Item href="#/action-2">episode I</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">episode II</Dropdown.Item>
+        <Dropdown.Item href="#/action-4">episode IV</Dropdown.Item>
       </DropdownButton>
     </Wrapper>
   );
