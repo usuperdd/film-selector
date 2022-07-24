@@ -11,6 +11,8 @@ import PrevImg from "../images/back.jpeg";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 
+import "./index.css"; //
+
 const Wrapper = styled.div`
   height: 100vh;
   background-color: #001f3f;
