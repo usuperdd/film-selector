@@ -8,6 +8,8 @@ import RoundedsquareImg from "../images/roundedsquare.png";
 import SkywalkersagaImg from "../images/skywalkersaga.jpeg";
 import TriangleImg from "../images/triangle.png";
 import PrevImg from "../images/back.jpeg";
+import Dropdown from "react-bootstrap/Dropdown";
+import DropdownButton from "react-bootstrap/DropdownButton";
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -50,6 +52,13 @@ function MovieDetails() {
       </BodyContainer>
       <ScenarioContainer></ScenarioContainer>
       {/* <SubImage src={RoundedsquareImg} /> */}
+      <DropdownButton id="dropdown-basic-button" title="Add">
+        <Dropdown.Item name="episode" href="#/action-1">
+          Person
+        </Dropdown.Item>
+        <Dropdown.Item href="#/action-2">Group</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+      </DropdownButton>
     </Wrapper>
   );
 }
