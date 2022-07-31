@@ -30,6 +30,8 @@ const Header = styled.div`
 
 const ScenarioContainer = styled.hr`
   border-top: 8px solid #dd33ff;
+  display: flex;
+  div.four{padding:50px 50px 50px 50px; }
 `;
 
 const MainImage = styled.img`
@@ -57,13 +59,14 @@ function MovieDetails() {
   
       <DropdownButton id="dropdown-basic-button" title="episode">
         <Dropdown.Item name="episode" href="#/action-1">
-          dc=
+
         </Dropdown.Item>
         <Dropdown.Item href="#/action-2">episode I</Dropdown.Item>
         <Dropdown.Item href="#/action-3">episode II</Dropdown.Item>
         <Dropdown.Item href="#/action-4">episode IV</Dropdown.Item>
       </DropdownButton>
     </Wrapper>
+
   );
 }
 
