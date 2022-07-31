@@ -29,7 +29,7 @@ const Header = styled.div`
 `;
 
 const ScenarioContainer = styled.hr`
-  border-top: 4px solid #c167ff;
+  border-top: 8px solid #dd33ff;
 `;
 
 const MainImage = styled.img`
@@ -54,6 +54,7 @@ function MovieDetails() {
       </BodyContainer>
       <ScenarioContainer></ScenarioContainer>
       {/* <SubImage src={RoundedsquareImg} /> */}
+  
       <DropdownButton id="dropdown-basic-button" title="episode">
         <Dropdown.Item name="episode" href="#/action-1">
           dc=
