@@ -45,6 +45,11 @@ const BodyContainer = styled.div`
   justify-content: center;
 `;
 
+const SliderWrapper = styled.div`
+  display: flex;
+  margin-left: 50px;
+`;
+
 function MovieDetails() {
   return (
     <Wrapper>
@@ -54,15 +59,16 @@ function MovieDetails() {
       </BodyContainer>
       <ScenarioContainer></ScenarioContainer>
       {/* <SubImage src={RoundedsquareImg} /> */}
-  
-      <DropdownButton id="dropdown-basic-button" title="episode">
-        <Dropdown.Item name="episode" href="#/action-1">
-          dc=
-        </Dropdown.Item>
-        <Dropdown.Item href="#/action-2">episode I</Dropdown.Item>
-        <Dropdown.Item href="#/action-3">episode II</Dropdown.Item>
-        <Dropdown.Item href="#/action-4">episode IV</Dropdown.Item>
-      </DropdownButton>
+      <SliderWrapper>
+        <DropdownButton id="dropdown-basic-button" title="episode">
+          <Dropdown.Item name="episode" href="#/action-1">
+            dc=
+          </Dropdown.Item>
+          <Dropdown.Item href="#/action-2">episode I</Dropdown.Item>
+          <Dropdown.Item href="#/action-3">episode II</Dropdown.Item>
+          <Dropdown.Item href="#/action-4">episode IV</Dropdown.Item>
+        </DropdownButton>
+      </SliderWrapper>
     </Wrapper>
   );
 }
