@@ -81,8 +81,8 @@ function MovieDetails() {
           <Dropdown.Item name="episode I" onClick={onClickEpisode}>
             episode I
           </Dropdown.Item>
-          <Dropdown.Item name="episode II">episode II</Dropdown.Item>
-          <Dropdown.Item name="episode III">episode IV</Dropdown.Item>
+          <Dropdown.Item name="episode II" onClick={onClickEpisode}>episode II</Dropdown.Item>
+          <Dropdown.Item name="episode III" onClick={onClickEpisode}>episode III</Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>
       <IntroductionWrapper>blah blah blah blah</IntroductionWrapper>
