@@ -21,6 +21,7 @@ const Header = styled.div`
 const ImageContainer = styled.div`
   width: 100%;
   background-color: black;
+  back
   height: 400px;
 `;
 const BodyContainer = styled.div`
@@ -53,8 +54,8 @@ const Block = styled.div`
 `;
 
 const SliderButton = styled.button`
-  font-size: 40px;
-  color: black;
+  font-size: 50px;
+  color: #dd33ff;
   font-weight: 700;
   background-color: transparent;
   border: none;
