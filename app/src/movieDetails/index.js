@@ -16,7 +16,7 @@ import "./index.css"; //
 const Wrapper = styled.div`
   height: 100vh;
   background-color: #001f3f;
-  color: white
+  color: white;
 `;
 
 const Header = styled.div`
@@ -32,7 +32,9 @@ const Header = styled.div`
 const ScenarioContainer = styled.hr`
   border-top: 8px solid #dd33ff;
   display: flex;
-  div.four{padding:50px 50px 50px 50px; }
+  div.four {
+    padding: 50px 50px 50px 50px;
+  }
 `;
 
 const MainImage = styled.img`
@@ -54,8 +56,8 @@ const SliderWrapper = styled.div`
 `;
 
 const IntroductionWrapper = styled.div`
-text-align: center;
-margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 40px;
 `;
 
 function MovieDetails() {
@@ -75,24 +77,16 @@ function MovieDetails() {
       <ScenarioContainer></ScenarioContainer>
       {/* <SubImage src={RoundedsquareImg} /> */}
       <SliderWrapper>
-<<<<<<< HEAD
-        <DropdownButton id="dropdown-basic-button" title="episode">
-          <Dropdown.Item name="episode" href="#/action-1">
-=======
         <DropdownButton id="dropdown-basic-button" title={episode}>
           <Dropdown.Item name="episode I" onClick={onClickEpisode}>
             episode I
->>>>>>> c7bd54f1378c321149776e5c28f27bbdcf776594
           </Dropdown.Item>
           <Dropdown.Item name="episode II">episode II</Dropdown.Item>
           <Dropdown.Item name="episode III">episode IV</Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>
-      <IntroductionWrapper>
-       blah blah blah blah
-      </IntroductionWrapper>
+      <IntroductionWrapper>blah blah blah blah</IntroductionWrapper>
     </Wrapper>
-
   );
 }
 
