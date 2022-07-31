@@ -139,7 +139,7 @@ function Main() {
     } else if (type == "COMEDY") {
       if (action == "prev" && ComedyIndex.first == 4) {
         setSFIndex({
-          first: 0,
+          first: 0, ///
           last: 4,
         });
       }
