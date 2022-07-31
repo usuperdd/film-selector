@@ -75,7 +75,7 @@ function MovieDetails() {
         <MainImage src={SkywalkersagaImg} />
       </BodyContainer>
       <ScenarioContainer></ScenarioContainer>
-      {/* <SubImage src={RoundedsquareImg} /> */}
+
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
           <Dropdown.Item name="episode I" onClick={onClickEpisode}>
