@@ -33,7 +33,7 @@ const ScenarioContainer = styled.hr`
 `;
 
 const MainImage = styled.img`
-  width: git500px;
+  width: 500px;
   height: 500px;
 `;
 const SubImage = styled.img`
@@ -51,6 +51,13 @@ const SliderWrapper = styled.div`
 `;
 
 function MovieDetails() {
+  const [episode, setEpisode] = useState("episode");
+
+  const onClickEpisode = (e) => {
+    const { name } = e.target;
+
+    setEpisode(name);
+  };
   return (
     <Wrapper>
       <Header></Header>
@@ -60,13 +67,12 @@ function MovieDetails() {
       <ScenarioContainer></ScenarioContainer>
       {/* <SubImage src={RoundedsquareImg} /> */}
       <SliderWrapper>
-        <DropdownButton id="dropdown-basic-button" title="episode">
-          <Dropdown.Item name="episode" href="#/action-1">
-            dc=
+        <DropdownButton id="dropdown-basic-button" title={episode}>
+          <Dropdown.Item name="episode I" onClick={onClickEpisode}>
+            episode I
           </Dropdown.Item>
-          <Dropdown.Item href="#/action-2">episode I</Dropdown.Item>
-          <Dropdown.Item href="#/action-3">episode II</Dropdown.Item>
-          <Dropdown.Item href="#/action-4">episode IV</Dropdown.Item>
+          <Dropdown.Item name="episode II">episode II</Dropdown.Item>
+          <Dropdown.Item name="episode III">episode IV</Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>
     </Wrapper>
