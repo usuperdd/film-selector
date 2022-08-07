@@ -181,6 +181,10 @@ function MovieDetails() {
           <Dropdown.Item name="Andor" onClick={onClickEpisode}>
             Andor
           </Dropdown.Item>
+          <Dropdown.Item name="jnvjv" onClick={onClickEpisode}>
+            jnvjv
+          </Dropdown.Item>
+
         </DropdownButton>
       </SliderWrapper>
 
