@@ -61,8 +61,19 @@ const IntroductionWrapper = styled.div`
 `;
 
 function MovieDetails() {
-  const [episode, setEpisode] = useState("episode");
+  const [episode, setEpisode] = useState("episode I");
 
+  const [episodeData, setEpisodeData] = useState({
+    "episode I": {
+      introduction: "A",
+    },
+    "episode II": {
+      introduction: "B",
+    },
+    "episode III": {
+      introduction: "C",
+    },
+  });
   const onClickEpisode = (e) => {
     const { name } = e.target;
 
@@ -81,11 +92,18 @@ function MovieDetails() {
           <Dropdown.Item name="episode I" onClick={onClickEpisode}>
             episode I
           </Dropdown.Item>
-          <Dropdown.Item name="episode II" onClick={onClickEpisode}>episode II</Dropdown.Item>
-          <Dropdown.Item name="episode III" onClick={onClickEpisode}>episode III</Dropdown.Item>
+          <Dropdown.Item name="episode II" onClick={onClickEpisode}>
+            episode II
+          </Dropdown.Item>
+          <Dropdown.Item name="episode III" onClick={onClickEpisode}>
+            episode III
+          </Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>
-      <IntroductionWrapper>blah blah blah blah</IntroductionWrapper>
+
+      <IntroductionWrapper>
+        {episodeData[episode]["introduction"]}
+      </IntroductionWrapper>
     </Wrapper>
   );
 }
