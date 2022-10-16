@@ -14,7 +14,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import "./index.css"; //
 
 const Wrapper = styled.div`
-  height: 100vh;
+  height: 100%;
   background-color: #001f3f;
   color: white;
 `;
@@ -184,7 +184,6 @@ function MovieDetails() {
           <Dropdown.Item name="jnvjv" onClick={onClickEpisode}>
             jnvjv
           </Dropdown.Item>
-
         </DropdownButton>
       </SliderWrapper>
 
