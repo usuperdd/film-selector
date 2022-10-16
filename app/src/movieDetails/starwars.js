@@ -70,7 +70,7 @@ const IntroductionWrapper = styled.div`
 const Introduction = styled.div`
   font-size: 18px;
 `;
-function MovieDetails() {
+function StarWars() {
   const [episode, setEpisode] = useState("episode I");
 
   const [episodeData, setEpisodeData] = useState({
@@ -196,4 +196,4 @@ function MovieDetails() {
   );
 }
 
-export default MovieDetails;
+export default StarWars;

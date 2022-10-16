@@ -7,7 +7,7 @@ import Main from "./main/index";
 import Community from "./community/index";
 import Post from "./post/index";
 import PostDetails from "./postDetails/index";
-import MovieDetails from "./movieDetails";
+import StarWars from "./movieDetails/starwars";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         <Route exact path="/community" component={Community} />
         <Route exact path="/post" component={Post} />
         <Route exact path="/details" component={PostDetails} />
-        <Route exact path="/movie" component={MovieDetails} />
+        <Route exact path="/movie/starwars" component={StarWars} />
       </Router>
     </div>
   );
