@@ -21,8 +21,6 @@ const Header = styled.div`
 const ImageContainer = styled.div`
   width: 100%;
   background-color: black;
-  back
-  height: 400px;
 `;
 const BodyContainer = styled.div`
   display: flex;
