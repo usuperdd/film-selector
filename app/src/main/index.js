@@ -8,13 +8,14 @@ import PrevImg from "../images/back.jpeg";
 
 const Wrapper = styled.div`
   height: 100%;
+
   background-color: #001f3f;
 `;
 
 const Header = styled.div`
   position: static;
   height: 70px;
-  width: 100%;
+  /* width: 100%; */
   background-image: url(${FooterImg});
 `;
 
@@ -41,8 +42,8 @@ const BlocksWrapper = styled.div`
 
 const Block = styled.div`
   background-color: #a40000;
-  width: 100px;
-  height: 140px;
+  width: 180px;
+  height: 200px;
   font-size: 24px;
   margin-right: 20px;
   margin-left: 20px;
@@ -61,45 +62,45 @@ const SliderButton = styled.button`
 function Main() {
   const [SFIndex, setSFIndex] = useState({
     first: 0,
-    last: 4,
+    last: 3,
   });
   const [ActionIndex, setActionIndex] = useState({
     first: 0,
-    last: 4,
+    last: 3,
   });
   const [DramaIndex, setDramaIndex] = useState({
     first: 0,
-    last: 4,
+    last: 3,
   });
   const [FanatasyIndex, setFanatasyIndex] = useState({
     first: 0,
-    last: 4,
+    last: 3,
   });
   const [ComedyIndex, setComedyIndex] = useState({
     first: 0,
-    last: 4,
+    last: 3,
   });
 
   const [RomanceIndex, setRomanceIndex] = useState({
     first: 0,
-    last: 4,
+    last: 3,
   });
 
   const [HorrorIndex, setHorrorIndex] = useState({
     first: 0,
-    last: 4,
+    last: 3,
   });
   const [SportsIndex, setSportsIndex] = useState({
     first: 0,
-    last: 4,
+    last: 3,
   });
 
   const [AnimationIndex, setAnimationIndex] = useState({
     first: 0,
-    last: 4,
+    last: 3,
   });
 
-  const SF = ["SF", 2, 3, 4, 5, 6, 7, 8];
+  const SF = ["SF", 2, 3, 4, 5, 6];
   const ACTION = ["ACTION", 2, 3, 4, 5, 6, 7, 8];
   const COMEDY = ["COMEDY", 2, 3, 4, 5, 6, 7, 8];
   const ROMANCE = ["ROMANCE", 2, 3, 4, 5, 6, 7, 8];
@@ -111,120 +112,120 @@ function Main() {
 
   const nextPage = (type, action) => {
     if (type == "SF") {
-      if (action == "prev" && SFIndex.first == 4) {
+      if (action == "prev" && SFIndex.first == 3) {
         setSFIndex({
           first: 0,
-          last: 4,
+          last: 3,
         });
       }
       if (action == "next" && SFIndex.first == 0) {
         setSFIndex({
-          first: 4,
-          last: 8,
+          first: 3,
+          last: 6,
         });
       }
     } else if (type == "ACTION") {
-      if (action == "prev" && ActionIndex.first == 4) {
-        setSFIndex({
+      if (action == "prev" && ActionIndex.first == 3) {
+        setActionIndex({
           first: 0,
-          last: 4,
+          last: 3,
         });
       }
       if (action == "next" && ActionIndex.first == 0) {
-        setSFIndex({
-          first: 4,
-          last: 8,
+        setActionIndex({
+          first: 3,
+          last: 6,
         });
       }
     } else if (type == "COMEDY") {
-      if (action == "prev" && ComedyIndex.first == 4) {
-        setSFIndex({
+      if (action == "prev" && ComedyIndex.first == 3) {
+        setComedyIndex({
           first: 0, ///
-          last: 4,
+          last: 3,
         });
       }
       if (action == "next" && ComedyIndex.first == 0) {
-        setSFIndex({
-          first: 4,
-          last: 8,
+        setComedyIndex({
+          first: 3,
+          last: 6,
         });
       }
     } else if (type == "ROMANCE") {
-      if (action == "prev" && RomanceIndex.first == 4) {
-        setSFIndex({
+      if (action == "prev" && RomanceIndex.first == 3) {
+        setRomanceIndex({
           first: 0, ///
-          last: 4,
+          last: 3,
         });
       }
       if (action == "next" && RomanceIndex.first == 0) {
-        setSFIndex({
-          first: 4,
-          last: 8,
+        setRomanceIndex({
+          first: 3,
+          last: 6,
         });
       }
     } else if (type == "FANTASY") {
-      if (action == "prev" && FanatasyIndex.first == 4) {
-        setSFIndex({
+      if (action == "prev" && FanatasyIndex.first == 3) {
+        setFanatasyIndex({
           first: 0, ///
-          last: 4,
+          last: 3,
         });
       }
       if (action == "next" && FanatasyIndex.first == 0) {
-        setSFIndex({
-          first: 4,
-          last: 8,
+        setFanatasyIndex({
+          first: 3,
+          last: 6,
         });
       }
     } else if (type == "SPORTS") {
-      if (action == "prev" && SportsIndex.first == 4) {
-        setSFIndex({
+      if (action == "prev" && SportsIndex.first == 3) {
+        setSportsIndex({
           first: 0, ///
-          last: 4,
+          last: 3,
         });
       }
       if (action == "next" && SportsIndex.first == 0) {
-        setSFIndex({
-          first: 4,
-          last: 8,
+        setSportsIndex({
+          first: 3,
+          last: 6,
         });
       }
     } else if (type == "HORROR") {
-      if (action == "prev" && HorrorIndex.first == 4) {
-        setSFIndex({
+      if (action == "prev" && HorrorIndex.first == 3) {
+        setHorrorIndex({
           first: 0, ///
           last: 4,
         });
       }
       if (action == "next" && HorrorIndex.first == 0) {
-        setSFIndex({
-          first: 4,
-          last: 8,
+        setHorrorIndex({
+          first: 3,
+          last: 6,
         });
       }
     } else if (type == "DRAMA") {
-      if (action == "prev" && DramaIndex.first == 4) {
-        setSFIndex({
+      if (action == "prev" && DramaIndex.first == 3) {
+        setDramaIndex({
           first: 0, ///
-          last: 4,
+          last: 3,
         });
       }
       if (action == "next" && DramaIndex.first == 0) {
-        setSFIndex({
-          first: 4,
-          last: 8,
+        setDramaIndex({
+          first: 3,
+          last: 6,
         });
       }
     } else if (type == "ANIMATION") {
-      if (action == "prev" && AnimationIndex.first == 4) {
-        setSFIndex({
+      if (action == "prev" && AnimationIndex.first == 3) {
+        setAnimationIndex({
           first: 0, ///
-          last: 4,
+          last: 3,
         });
       }
       if (action == "next" && AnimationIndex.first == 0) {
-        setSFIndex({
-          first: 4,
-          last: 8,
+        setAnimationIndex({
+          first: 3,
+          last: 6,
         });
       }
     }
