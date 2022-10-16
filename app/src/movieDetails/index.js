@@ -17,6 +17,7 @@ const Wrapper = styled.div`
   height: 100%;
   background-color: #001f3f;
   color: white;
+  padding-bottom: 30px;
 `;
 
 const Header = styled.div`
@@ -48,10 +49,11 @@ const SubImage = styled.img`
 const BodyContainer = styled.div`
   display: flex;
   justify-content: center;
+  background-color: #001f3f;
 `;
 
 const SliderWrapper = styled.div`
-  display: flex;
+  /* overflow: auto; */
   margin-left: 50px;
 `;
 
