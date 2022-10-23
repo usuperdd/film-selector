@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import FooterImg from "../images/footer.jpeg";
 import PrevImg from "../images/back.jpeg";
+import Starwars from "../images/skywalkersaga.jpeg";
 
 const Wrapper = styled.div`
   height: 100%;
@@ -48,8 +49,14 @@ const Block = styled.div`
   margin-right: 20px;
   margin-left: 20px;
   font-weight: 700;
-  text-align: center;
-  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const PosterImg = styled.img`
+  width: 100%;
+  height: 100%;
 `;
 
 const SliderButton = styled.button`
@@ -100,7 +107,7 @@ function Main() {
     last: 3,
   });
 
-  const SF = ["SF", 2, 3, 4, 5, 6];
+  const SF = ["SF", `${Starwars}`];
   const ACTION = ["ACTION", 2, 3, 4, 5, 6, 7, 8];
   const COMEDY = ["COMEDY", 2, 3, 4, 5, 6, 7, 8];
   const ROMANCE = ["ROMANCE", 2, 3, 4, 5, 6, 7, 8];
@@ -240,15 +247,17 @@ function Main() {
             <SliderButton onClick={() => nextPage("SF", "prev")}>
               <span>&#8592;</span>
             </SliderButton>
-            {SF.slice(SFIndex.first, SFIndex.last).map((img) => (
-              <Block>{img}</Block>
+            {SF.slice(SFIndex.first, SFIndex.last).map((img, index) => (
+              <Block>
+                {index == 0 ? <p>{img}</p> : <PosterImg src={img}></PosterImg>}
+              </Block>
             ))}
             <SliderButton onClick={() => nextPage("SF", "next")}>
               <span>&#8594;</span>
             </SliderButton>
           </BlocksWrapper>
 
-          <BlocksWrapper>
+          {/* <BlocksWrapper>
             <SliderButton onClick={() => nextPage("ACTION", "prev")}>
               <span>&#8592;</span>
             </SliderButton>
@@ -346,7 +355,7 @@ function Main() {
             <SliderButton onClick={() => nextPage("ANIMATION", "next")}>
               <span>&#8594;</span>
             </SliderButton>
-          </BlocksWrapper>
+          </BlocksWrapper> */}
         </CommunityWrapper>
       </BodyContainer>
     </Wrapper>
