@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Login from "./login/index";
 import SignUp from "./signup/index";
@@ -12,19 +12,16 @@ import Alien from "./movieDetails/alien";
 
 function App() {
   return (
-    <div>
-      <Router>
-        <Route exact path="/" component={Login} />
-        <Route exact path="/signup" component={SignUp} />
-        <Route exact path="/survey" component={Survey} />
-        <Route exact path="/main" component={Main} />
-        <Route exact path="/community" component={Community} />
-        <Route exact path="/post" component={Post} />
-        <Route exact path="/details" component={PostDetails} />
-        <Route exact path="/movie/starwars" component={StarWars} />
-        <Route exact path="/movie/alien" component={Alien} />
-      </Router>
-    </div>
+    <Routes>
+      <Route exact path="/" element={<Login />} />
+      <Route exact path="/signup" element={<SignUp />} />
+      <Route exact path="/survey" element={<Survey />} />
+      <Route exact path="/main" element={<Main />} />
+      <Route exact path="/community" element={<Community />} />
+      <Route exact path="/post" element={<Post />} />
+      <Route exact path="/details" element={<PostDetails />} />
+      <Route exact path="/movie/starwars" element={<StarWars />} />
+    </Routes>
   );
 }
 

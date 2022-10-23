@@ -5,6 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import UsernameImg from "../images/username.png";
 import EmailImg from "../images/email.jpeg";
 import PasswordImg from "../images/password.png";
+import { useNavigate } from "react-router-dom";
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -115,9 +116,9 @@ const Paragraph = styled.p`
 `;
 
 function SignUp() {
+  const navigate = useNavigate();
   function navigateToLogin() {
-    alert("h");
-    // history.push("/login");
+    navigate("/");
   }
   return (
     <Wrapper>
@@ -142,10 +143,10 @@ function SignUp() {
           <Paragraph> I read and agree to Terms & Conditions </Paragraph>
         </AgreementContainer>
 
-        <Button onClick={navigateToLogin}>Create Account</Button>
+        <Button>Create Account</Button>
         <ParagraphContainer>
           <Paragraph>Already have an account?</Paragraph>
-          <Paragraph>Sign in</Paragraph>
+          <Paragraph onClick={navigateToLogin}>Sign in</Paragraph>
         </ParagraphContainer>
       </Container>
     </Wrapper>

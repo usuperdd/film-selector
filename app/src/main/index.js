@@ -5,6 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import FooterImg from "../images/footer.jpeg";
 import PrevImg from "../images/back.jpeg";
+import Starwars from "../images/skywalkersaga.jpeg";
+import { useNavigate } from "react-router-dom";
 
 const Wrapper = styled.div`
   height: 100%;
@@ -48,8 +50,14 @@ const Block = styled.div`
   margin-right: 20px;
   margin-left: 20px;
   font-weight: 700;
-  text-align: center;
-  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const PosterImg = styled.img`
+  width: 100%;
+  height: 100%;
 `;
 
 const SliderButton = styled.button`
@@ -60,6 +68,8 @@ const SliderButton = styled.button`
   border: none;
 `;
 function Main() {
+  const navigate = useNavigate();
+
   const [SFIndex, setSFIndex] = useState({
     first: 0,
     last: 3,
@@ -100,7 +110,7 @@ function Main() {
     last: 3,
   });
 
-  const SF = ["SF", 2, 3, 4, 5, 6];
+  const SF = ["SF", { image: `${Starwars}`, link: "/movie/starwars" }];
   const ACTION = ["ACTION", 2, 3, 4, 5, 6, 7, 8];
   const COMEDY = ["COMEDY", 2, 3, 4, 5, 6, 7, 8];
   const ROMANCE = ["ROMANCE", 2, 3, 4, 5, 6, 7, 8];
@@ -230,6 +240,10 @@ function Main() {
       }
     }
   };
+
+  const navigateToMovie = (link) => {
+    navigate(link);
+  };
   return (
     <Wrapper>
       <Header></Header>
@@ -240,15 +254,24 @@ function Main() {
             <SliderButton onClick={() => nextPage("SF", "prev")}>
               <span>&#8592;</span>
             </SliderButton>
-            {SF.slice(SFIndex.first, SFIndex.last).map((img) => (
-              <Block>{img}</Block>
+            {SF.slice(SFIndex.first, SFIndex.last).map((lst, index) => (
+              <Block>
+                {index == 0 ? (
+                  <p>{lst}</p>
+                ) : (
+                  <PosterImg
+                    src={lst.image}
+                    onClick={() => navigateToMovie(lst.link)}
+                  ></PosterImg>
+                )}
+              </Block>
             ))}
             <SliderButton onClick={() => nextPage("SF", "next")}>
               <span>&#8594;</span>
             </SliderButton>
           </BlocksWrapper>
 
-          <BlocksWrapper>
+          {/* <BlocksWrapper>
             <SliderButton onClick={() => nextPage("ACTION", "prev")}>
               <span>&#8592;</span>
             </SliderButton>
@@ -346,7 +369,7 @@ function Main() {
             <SliderButton onClick={() => nextPage("ANIMATION", "next")}>
               <span>&#8594;</span>
             </SliderButton>
-          </BlocksWrapper>
+          </BlocksWrapper> */}
         </CommunityWrapper>
       </BodyContainer>
     </Wrapper>

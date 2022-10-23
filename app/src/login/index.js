@@ -4,7 +4,7 @@ import { Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import UsernameImg from "../images/username.png";
 import PasswordImg from "../images/password.png";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -111,11 +111,11 @@ function Login() {
   });
 
   const { id, password } = user;
-  const history = useHistory();
+  const navigate = useNavigate();
 
-  function navigateToSignUp() {
-    history.push("/signup");
-  }
+  const navigateToSignUp = () => {
+    navigate("/signup");
+  };
   return (
     <Wrapper>
       <Row noGutter>
