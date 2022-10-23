@@ -8,6 +8,7 @@ import Community from "./community/index";
 import Post from "./post/index";
 import PostDetails from "./postDetails/index";
 import StarWars from "./movieDetails/starwars";
+import Alien from "./movieDetails/alien";
 
 function App() {
   return (

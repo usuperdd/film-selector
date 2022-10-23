@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import FooterImg from "../images/footer.jpeg";
 import PrevImg from "../images/back.jpeg";
 import Starwars from "../images/skywalkersaga.jpeg";
+import { useNavigate } from "react-router-dom";
 
 const Wrapper = styled.div`
   height: 100%;
@@ -67,6 +68,8 @@ const SliderButton = styled.button`
   border: none;
 `;
 function Main() {
+  const navigate = useNavigate();
+
   const [SFIndex, setSFIndex] = useState({
     first: 0,
     last: 3,
@@ -107,7 +110,7 @@ function Main() {
     last: 3,
   });
 
-  const SF = ["SF", `${Starwars}`];
+  const SF = ["SF", { image: `${Starwars}`, link: "/movie/starwars" }];
   const ACTION = ["ACTION", 2, 3, 4, 5, 6, 7, 8];
   const COMEDY = ["COMEDY", 2, 3, 4, 5, 6, 7, 8];
   const ROMANCE = ["ROMANCE", 2, 3, 4, 5, 6, 7, 8];
@@ -237,6 +240,10 @@ function Main() {
       }
     }
   };
+
+  const navigateToMovie = (link) => {
+    navigate(link);
+  };
   return (
     <Wrapper>
       <Header></Header>
@@ -247,9 +254,16 @@ function Main() {
             <SliderButton onClick={() => nextPage("SF", "prev")}>
               <span>&#8592;</span>
             </SliderButton>
-            {SF.slice(SFIndex.first, SFIndex.last).map((img, index) => (
+            {SF.slice(SFIndex.first, SFIndex.last).map((lst, index) => (
               <Block>
-                {index == 0 ? <p>{img}</p> : <PosterImg src={img}></PosterImg>}
+                {index == 0 ? (
+                  <p>{lst}</p>
+                ) : (
+                  <PosterImg
+                    src={lst.image}
+                    onClick={() => navigateToMovie(lst.link)}
+                  ></PosterImg>
+                )}
               </Block>
             ))}
             <SliderButton onClick={() => nextPage("SF", "next")}>
