@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import FooterImg from "../images/footer.jpeg";
 import RoundedsquareImg from "../images/roundedsquare.png";
-import SkywalkersagaImg from "../images/skywalkersaga.jpeg";
+import Alien1Img from "../images/alien1.jpeg";
 import TriangleImg from "../images/triangle.png";
 import PrevImg from "../images/back.jpeg";
 import Dropdown from "react-bootstrap/Dropdown";
@@ -71,20 +71,20 @@ const Introduction = styled.div`
   font-size: 18px;
 `;
 function Alien() {
-  const [episode, setEpisode] = useState("episode I");
+  const [episode, setEpisode] = useState("ALIEN");
 
   const [episodeData, setEpisodeData] = useState({
-    "episode I": {
+    "ALIEN": {
       introduction:
-        "THE PHANTOM MENACE : Turmoil has engulfed the Galactic Republic. The taxation of trade routes to outlying star systems is in dispute. Hoping to resolve the matter with a blockade of deadly battleships, the greedy Trade Federation has stopped all shipping to the small planet of Naboo. While the Congress of the Republic endlessly debates this alarming chain of events, the Supreme Chancellor has secretly dispatched two Jedi Knights, the guardians of peace and justice in the galaxy, to settle the conflict....",
+        "A word of warning... Sometimes the scariest things come from within. It's Alien, the 8th passenger. In space no one can hear you scream.",
     },
-    "episode II": {
+    "ALIENS": {
       introduction:
-        "ATTACK OF THE CLONES : There is unrest in the Galactic Senate. Several thousand solar systems have declared their intentions to leave the Republic. This separatist movement, under the leadership of the mysterious Count Dooku, has made it difficult for the limited number of Jedi Knights to maintain peace and order in the galaxy. Senator Amidala, the former Queen of Naboo, is returning to the Galactic Senate to vote on the critical issue of creating an ARMY OF THE REPUBLIC to assist the overwhelmed Jedi....",
+        "This Time It's War",
     },
-    "episode III": {
+    "ALIEN 3": {
       introduction:
-        "REVENGE OF THE SITH : War! The Republic is crumbling under attacks by the ruthless Sith Lord, Count Dooku. There are heroes on both sides. Evil is everywhere. In a stunning move, the fiendish droid leader, General Grievous, has swept into the Republic capital and kidnapped Chancellor Palpatine, leader of the Galactic Senate. As the Separatist Droid Army attempts to flee the besieged capital with their valuable hostage, two Jedi Knights lead a desperate mission to rescue the captive Chancellor....",
+        "1979. It popped out of the body. 1986. It seemed to be gone forever. However, in 1993. We must see its disastrous end. So... back!",
     },
     "episode IV": {
       introduction:
@@ -135,14 +135,14 @@ function Alien() {
     <Wrapper>
       <Header></Header>
       <BodyContainer>
-        <MainImage src={SkywalkersagaImg} />
+        <MainImage src={Alien1Img} />
       </BodyContainer>
       <ScenarioContainer></ScenarioContainer>
 
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
-          <Dropdown.Item name="episode I" onClick={onClickEpisode}>
-            episode I
+          <Dropdown.Item name="ALIEN" onClick={onClickEpisode}>
+            ALIEN
           </Dropdown.Item>
           <Dropdown.Item name="episode II" onClick={onClickEpisode}>
             episode II
