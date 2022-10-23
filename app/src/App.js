@@ -21,6 +21,8 @@ function App() {
       <Route exact path="/post" element={<Post />} />
       <Route exact path="/details" element={<PostDetails />} />
       <Route exact path="/movie/starwars" element={<StarWars />} />
+      <Route exact path="/movie/alien" element={<Alien />} />
+      
     </Routes>
   );
 }
