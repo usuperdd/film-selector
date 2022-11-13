@@ -7,8 +7,8 @@ import Main from "./main/index";
 import Community from "./community/index";
 import Post from "./post/index";
 import PostDetails from "./postDetails/index";
-import StarWars from "./movieDetails/starwars";
-import Alien from "./movieDetails/alien";
+import StarWars from "./movieDetails/sf/starwars";
+import Alien from "./movieDetails/sf/alien";
 
 function App() {
   return (
@@ -20,9 +20,8 @@ function App() {
       <Route exact path="/community" element={<Community />} />
       <Route exact path="/post" element={<Post />} />
       <Route exact path="/details" element={<PostDetails />} />
-      <Route exact path="/movie/starwars" element={<StarWars />} />
-      <Route exact path="/movie/alien" element={<Alien />} />
-      
+      <Route exact path="/movie/sf/starwars" element={<StarWars />} />
+      <Route exact path="/movie/sf/alien" element={<Alien />} />
     </Routes>
   );
 }

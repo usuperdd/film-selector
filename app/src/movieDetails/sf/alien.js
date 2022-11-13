@@ -3,15 +3,15 @@ import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import FooterImg from "../images/footer.jpeg";
-import RoundedsquareImg from "../images/roundedsquare.png";
-import Alien1Img from "../images/alien1.jpeg";
-import TriangleImg from "../images/triangle.png";
-import PrevImg from "../images/back.jpeg";
+import FooterImg from "../../images/footer.jpeg";
+import RoundedsquareImg from "../../images/roundedsquare.png";
+import Alien1Img from "../../images/alien1.jpeg";
+import TriangleImg from "../../images/triangle.png";
+import PrevImg from "../../images/back.jpeg";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 
-import "./index.css"; //
+import "../index.css"; //
 
 const Wrapper = styled.div`
   height: 100%;
@@ -74,13 +74,12 @@ function Alien() {
   const [episode, setEpisode] = useState("ALIEN");
 
   const [episodeData, setEpisodeData] = useState({
-    "ALIEN": {
+    ALIEN: {
       introduction:
         "A word of warning... Sometimes the scariest things come from within. It's Alien, the 8th passenger. In space no one can hear you scream.",
     },
-    "ALIENS": {
-      introduction:
-        "This Time It's War",
+    ALIENS: {
+      introduction: "This Time It's War",
     },
     "ALIEN 3": {
       introduction:

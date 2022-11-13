@@ -3,15 +3,15 @@ import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import FooterImg from "../images/footer.jpeg";
-import RoundedsquareImg from "../images/roundedsquare.png";
-import SkywalkersagaImg from "../images/skywalkersaga.jpeg";
-import TriangleImg from "../images/triangle.png";
-import PrevImg from "../images/back.jpeg";
+import FooterImg from "../../images/footer.jpeg";
+import RoundedsquareImg from "../../images/roundedsquare.png";
+import SkywalkersagaImg from "../../images/skywalkersaga.jpeg";
+import TriangleImg from "../../images/triangle.png";
+import PrevImg from "../../images/back.jpeg";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 
-import "./index.css"; //
+import "../index.css"; //
 
 const Wrapper = styled.div`
   height: 100%;
