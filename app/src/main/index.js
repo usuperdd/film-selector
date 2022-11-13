@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import FooterImg from "../images/footer.jpeg";
 import PrevImg from "../images/back.jpeg";
 import Starwars from "../images/skywalkersaga.jpeg";
+import Alien from "../images/alien1.jpeg";
 import { useNavigate } from "react-router-dom";
 
 const Wrapper = styled.div`
@@ -110,7 +111,11 @@ function Main() {
     last: 3,
   });
 
-  const SF = ["SF", { image: `${Starwars}`, link: "/movie/starwars" }];
+  const SF = [
+    "SF",
+    { image: `${Starwars}`, link: "/movie/sf/starwars" },
+    { image: `${Alien}`, link: "/movie/sf/alien" },
+  ];
   const ACTION = ["ACTION", 2, 3, 4, 5, 6, 7, 8];
   const COMEDY = ["COMEDY", 2, 3, 4, 5, 6, 7, 8];
   const ROMANCE = ["ROMANCE", 2, 3, 4, 5, 6, 7, 8];
