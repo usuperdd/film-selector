@@ -11,6 +11,8 @@ import StarWars from "./movieDetails/sf/starwars";
 import Alien from "./movieDetails/sf/alien";
 import Planetoftheapes from "./movieDetails/sf/planetoftheapes";
 import Thematrix from "./movieDetails/sf/thematrix";
+import Onedollarlawyer from "./movieDetails/drama/onedollarlowyer";
+import Lacasadepapel from "./movieDetails/drama/lacasadepapel";
 
 
 function App() {
@@ -27,7 +29,8 @@ function App() {
       <Route exact path="/movie/sf/alien" element={<Alien />} />
       <Route exact path="/movie/sf/planetoftheapes" element={<Planetoftheapes />} />
       <Route exact path="/movie/sf/thematrix" element={<Thematrix />} />
-    </Routes>
+      <Route exact path="/movie/drama/lacasadepapel" element={<Lacasadepapel />} />
+      </Routes>
   );
 }
 
