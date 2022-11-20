@@ -9,6 +9,9 @@ import Post from "./post/index";
 import PostDetails from "./postDetails/index";
 import StarWars from "./movieDetails/sf/starwars";
 import Alien from "./movieDetails/sf/alien";
+import Planetoftheapes from "./movieDetails/sf/planetoftheapes";
+import Thematrix from "./movieDetails/sf/thematrix";
+
 
 function App() {
   return (
@@ -22,6 +25,8 @@ function App() {
       <Route exact path="/details" element={<PostDetails />} />
       <Route exact path="/movie/sf/starwars" element={<StarWars />} />
       <Route exact path="/movie/sf/alien" element={<Alien />} />
+      <Route exact path="/movie/sf/planetoftheapes" element={<Planetoftheapes />} />
+      <Route exact path="/movie/sf/thematrix" element={<Thematrix />} />
     </Routes>
   );
 }

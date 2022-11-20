@@ -71,7 +71,7 @@ const Introduction = styled.div`
   font-size: 18px;
 `;
 function Planetoftheapes() {
-  const [episode, setEpisode] = useState("episode I");
+  const [episode, setEpisode] = useState("original : Planet of the Apes");
 
   const [episodeData, setEpisodeData] = useState({
     "original : Planet of the Apes": {
@@ -104,7 +104,7 @@ function Planetoftheapes() {
     <Wrapper>
       <Header></Header>
       <BodyContainer>
-        <MainImage src={SkywalkersagaImg} />
+        <MainImage src={PlanetoftheapesImg} />
       </BodyContainer>
       <ScenarioContainer></ScenarioContainer>
 
