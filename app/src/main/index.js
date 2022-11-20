@@ -7,6 +7,9 @@ import FooterImg from "../images/footer.jpeg";
 import PrevImg from "../images/back.jpeg";
 import Starwars from "../images/skywalkersaga.jpeg";
 import Alien from "../images/alien1.jpeg";
+import Planet from "../images/planetoftheapes.jpeg";
+import Matrix from "../images/thematrix.jpeg";
+
 import { useNavigate } from "react-router-dom";
 
 const Wrapper = styled.div`
@@ -115,6 +118,9 @@ function Main() {
     "SF",
     { image: `${Starwars}`, link: "/movie/sf/starwars" },
     { image: `${Alien}`, link: "/movie/sf/alien" },
+
+    { image: `${Planet}`, link: "/movie/sf/planetoftheapes" },
+    { image: `${Matrix}`, link: "/movie/sf/thematrix" },
   ];
   const ACTION = ["ACTION", 2, 3, 4, 5, 6, 7, 8];
   const COMEDY = ["COMEDY", 2, 3, 4, 5, 6, 7, 8];
@@ -126,6 +132,7 @@ function Main() {
   const ANIMATION = ["ANIMATION", 2, 3, 4, 5, 6, 7, 8];
 
   const nextPage = (type, action) => {
+    console.log(SFIndex);
     if (type == "SF") {
       if (action == "prev" && SFIndex.first == 3) {
         setSFIndex({
@@ -134,9 +141,10 @@ function Main() {
         });
       }
       if (action == "next" && SFIndex.first == 0) {
+        console.log(SF.length);
         setSFIndex({
           first: 3,
-          last: 6,
+          last: SF.length,
         });
       }
     } else if (type == "ACTION") {
@@ -261,7 +269,7 @@ function Main() {
             </SliderButton>
             {SF.slice(SFIndex.first, SFIndex.last).map((lst, index) => (
               <Block>
-                {index == 0 ? (
+                {SFIndex.first == 0 && index == 0 ? (
                   <p>{lst}</p>
                 ) : (
                   <PosterImg
