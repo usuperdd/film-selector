@@ -11,6 +11,7 @@ import Planet from "../images/planetoftheapes.jpeg";
 import Matrix from "../images/thematrix.jpeg";
 import LacasadepapelImg from "../images/lacasadepapel.jpeg";
 import OnedollarlawyerImg from "../images/onedollarlawyer.jpeg";
+import StoveleagueImg from "../images/stoveleague.jpeg";
 
 import { useNavigate } from "react-router-dom";
 
@@ -131,10 +132,14 @@ function Main() {
       image: `${LacasadepapelImg}`,
       link: "/movie/drama/lacasadepapel",
     },
-    // {
-    //   image: `${OnedollarlawyerImg}`,
-    //   link: "/movie/drama/lacasadepapel",
-    // },
+    {
+      image: `${OnedollarlawyerImg}`,
+      link: "/movie/drama/onedollarlawyer",
+    },
+    {
+      image: `${StoveleagueImg}`,
+      link: "/movie/drama/stoveleague",
+    },
   ];
   const ACTION = ["ACTION", 2, 3, 4, 5, 6, 7, 8];
   const COMEDY = ["COMEDY", 2, 3, 4, 5, 6, 7, 8];

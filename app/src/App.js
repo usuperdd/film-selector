@@ -15,8 +15,6 @@ import Onedollarlawyer from "./movieDetails/drama/onedollarlowyer";
 import Lacasadepapel from "./movieDetails/drama/lacasadepapel";
 import Stoveleague from "./movieDetails/drama/stoveleague";
 
-
-
 function App() {
   return (
     <Routes>
@@ -29,12 +27,24 @@ function App() {
       <Route exact path="/details" element={<PostDetails />} />
       <Route exact path="/movie/sf/starwars" element={<StarWars />} />
       <Route exact path="/movie/sf/alien" element={<Alien />} />
-      <Route exact path="/movie/sf/planetoftheapes" element={<Planetoftheapes />} />
+      <Route
+        exact
+        path="/movie/sf/planetoftheapes"
+        element={<Planetoftheapes />}
+      />
       <Route exact path="/movie/sf/thematrix" element={<Thematrix />} />
-      <Route exact path="/movie/drama/onedollarlowyer" element={<Onedollarlawyer />} />
-      <Route exact path="/movie/drama/lacasadepapel" element={<Lacasadepapel />} />
+      <Route
+        exact
+        path="/movie/drama/onedollarlawyer"
+        element={<Onedollarlawyer />}
+      />
+      <Route
+        exact
+        path="/movie/drama/lacasadepapel"
+        element={<Lacasadepapel />}
+      />
       <Route exact path="/movie/drama/stoveleague" element={<Stoveleague />} />
-      </Routes>
+    </Routes>
   );
 }
 
