@@ -13,6 +13,8 @@ import Planetoftheapes from "./movieDetails/sf/planetoftheapes";
 import Thematrix from "./movieDetails/sf/thematrix";
 import Onedollarlawyer from "./movieDetails/drama/onedollarlowyer";
 import Lacasadepapel from "./movieDetails/drama/lacasadepapel";
+import Stoveleague from "./movieDetails/drama/stoveleague";
+
 
 
 function App() {
@@ -30,6 +32,7 @@ function App() {
       <Route exact path="/movie/sf/planetoftheapes" element={<Planetoftheapes />} />
       <Route exact path="/movie/sf/thematrix" element={<Thematrix />} />
       <Route exact path="/movie/drama/lacasadepapel" element={<Lacasadepapel />} />
+      <Route exact path="/movie/drama/stoveleague" element={<Stoveleague />} />
       </Routes>
   );
 }
