@@ -9,6 +9,8 @@ import Starwars from "../images/skywalkersaga.jpeg";
 import Alien from "../images/alien1.jpeg";
 import Planet from "../images/planetoftheapes.jpeg";
 import Matrix from "../images/thematrix.jpeg";
+import LacasadepapelImg from "../images/lacasadepapel.jpeg";
+import OnedollarlawyerImg from "../images/onedollarlawyer.jpeg";
 
 import { useNavigate } from "react-router-dom";
 
@@ -122,13 +124,31 @@ function Main() {
     { image: `${Planet}`, link: "/movie/sf/planetoftheapes" },
     { image: `${Matrix}`, link: "/movie/sf/thematrix" },
   ];
+
+  const DRAMA = [
+    "DRAMA",
+    {
+      image: `${LacasadepapelImg}`,
+      link: "/movie/drama/lacasadepapel",
+    },
+    {
+      image: `${OnedollarlawyerImg}`,
+      link: "/movie/drama/lacasadepapel",
+    },
+
+    4,
+    5,
+    6,
+    7,
+    8,
+  ];
   const ACTION = ["ACTION", 2, 3, 4, 5, 6, 7, 8];
   const COMEDY = ["COMEDY", 2, 3, 4, 5, 6, 7, 8];
   const ROMANCE = ["ROMANCE", 2, 3, 4, 5, 6, 7, 8];
   const FANTASY = ["FANTASY", 2, 3, 4, 5, 6, 7, 8];
   const SPORTS = ["SPORTS", 2, 3, 4, 5, 6, 7, 8];
   const HORROR = ["HORROR", 2, 3, 4, 5, 6, 7, 8];
-  const DRAMA = ["DRAMA", 2, 3, 4, 5, 6, 7, 8];
+
   const ANIMATION = ["ANIMATION", 2, 3, 4, 5, 6, 7, 8];
 
   const nextPage = (type, action) => {
@@ -284,6 +304,18 @@ function Main() {
             </SliderButton>
           </BlocksWrapper>
 
+          <BlocksWrapper>
+            <SliderButton onClick={() => nextPage("DRAMA", "prev")}>
+              <span>&#8592;</span>
+            </SliderButton>
+            {DRAMA.slice(DramaIndex.first, DramaIndex.last).map((img) => (
+              <Block>{img}</Block>
+            ))}
+            <SliderButton onClick={() => nextPage("DRAMA", "next")}>
+              <span>&#8594;</span>
+            </SliderButton>
+          </BlocksWrapper>
+
           {/* <BlocksWrapper>
             <SliderButton onClick={() => nextPage("ACTION", "prev")}>
               <span>&#8592;</span>
@@ -358,18 +390,7 @@ function Main() {
             </SliderButton>
           </BlocksWrapper>
 
-          <BlocksWrapper>
-            <SliderButton onClick={() => nextPage("DRAMA", "prev")}>
-              <span>&#8592;</span>
-            </SliderButton>
-            {DRAMA.slice(DramaIndex.first, DramaIndex.last).map((img) => (
-              <Block>{img}</Block>
-            ))}
-            <SliderButton onClick={() => nextPage("DRAMA", "next")}>
-              <span>&#8594;</span>
-            </SliderButton>
-          </BlocksWrapper>
-
+         
           <BlocksWrapper>
             <SliderButton onClick={() => nextPage("ANIMATION", "prev")}>
               <span>&#8592;</span>
