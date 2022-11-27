@@ -31,6 +31,7 @@ function App() {
       <Route exact path="/movie/sf/alien" element={<Alien />} />
       <Route exact path="/movie/sf/planetoftheapes" element={<Planetoftheapes />} />
       <Route exact path="/movie/sf/thematrix" element={<Thematrix />} />
+      <Route exact path="/movie/drama/onedollarlowyer" element={<Onedollarlawyer />} />
       <Route exact path="/movie/drama/lacasadepapel" element={<Lacasadepapel />} />
       <Route exact path="/movie/drama/stoveleague" element={<Stoveleague />} />
       </Routes>
