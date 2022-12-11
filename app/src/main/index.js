@@ -12,6 +12,12 @@ import Matrix from "../images/thematrix.jpeg";
 import LacasadepapelImg from "../images/lacasadepapel.jpeg";
 import OnedollarlawyerImg from "../images/onedollarlawyer.jpeg";
 import StoveleagueImg from "../images/stoveleague.jpeg";
+import ThegoldenspoonImg from "../images/thegoldenspoon.jpeg";
+import RebornrichImg from "../images/rebornrich.jpeg";
+import AnnabelleImg from "../images/annabelle.jpeg";
+import ItImg from "../images/it.jpeg";
+import TheconjuringImg from "../images/theconjuring.jpeg";
+import ThenunImg from "../images/thenun.jpeg";
 
 import { useNavigate } from "react-router-dom";
 
@@ -140,13 +146,41 @@ function Main() {
       image: `${StoveleagueImg}`,
       link: "/movie/drama/stoveleague",
     },
+    {
+      image: `${ThegoldenspoonImg}`,
+      link: "/movie/drama/thegoldenspoon",
+    },
+    {
+      image: `${RebornrichImg}`,
+      link: "/movie/drama/rebornrich",
+    },
   ];
+
+  const HORROR = [
+    "HORROR",
+    {
+      image: `${AnnabelleImg}`,
+      link: "/movie/horror/annabelle",
+    },
+    {
+      image: `${ItImg}`,
+      link: "/movie/horror/it",
+    },
+    {
+      image: `${TheconjuringImg}`,
+      link: "/movie/horror/theconjuring",
+    },
+    {
+      image: `${ThenunImg}`,
+      link: "/movie/horror/thenun",
+    },
+  ];
+
   const ACTION = ["ACTION", 2, 3, 4, 5, 6, 7, 8];
   const COMEDY = ["COMEDY", 2, 3, 4, 5, 6, 7, 8];
   const ROMANCE = ["ROMANCE", 2, 3, 4, 5, 6, 7, 8];
   const FANTASY = ["FANTASY", 2, 3, 4, 5, 6, 7, 8];
   const SPORTS = ["SPORTS", 2, 3, 4, 5, 6, 7, 8];
-  const HORROR = ["HORROR", 2, 3, 4, 5, 6, 7, 8];
 
   const ANIMATION = ["ANIMATION", 2, 3, 4, 5, 6, 7, 8];
 
@@ -176,6 +210,19 @@ function Main() {
         setDramaIndex({
           first: 3,
           last: DRAMA.length,
+        });
+      }
+    } else if (type == "HORROR") {
+      if (action == "prev" && HorrorIndex.first == 3) {
+        setHorrorIndex({
+          first: 0, ///
+          last: 3,
+        });
+      }
+      if (action == "next" && HorrorIndex.first == 0) {
+        setHorrorIndex({
+          first: 3,
+          last: HorrorIndex.length,
         });
       }
     } else if (type == "ACTION") {
@@ -243,19 +290,6 @@ function Main() {
           last: 6,
         });
       }
-    } else if (type == "HORROR") {
-      if (action == "prev" && HorrorIndex.first == 3) {
-        setHorrorIndex({
-          first: 0, ///
-          last: 4,
-        });
-      }
-      if (action == "next" && HorrorIndex.first == 0) {
-        setHorrorIndex({
-          first: 3,
-          last: 6,
-        });
-      }
     } else if (type == "ANIMATION") {
       if (action == "prev" && AnimationIndex.first == 3) {
         setAnimationIndex({
@@ -310,6 +344,29 @@ function Main() {
               (lst, index) => (
                 <Block>
                   {DramaIndex.first == 0 && index == 0 ? (
+                    <p>{lst}</p>
+                  ) : (
+                    <PosterImg
+                      src={lst.image}
+                      onClick={() => navigateToMovie(lst.link)}
+                    ></PosterImg>
+                  )}
+                </Block>
+              )
+            )}
+            <SliderButton onClick={() => nextPage("DRAMA", "next")}>
+              <span>&#8594;</span>
+            </SliderButton>
+          </BlocksWrapper>
+
+          <BlocksWrapper>
+            <SliderButton onClick={() => nextPage("HORROR", "prev")}>
+              <span>&#8592;</span>
+            </SliderButton>
+            {HORROR.slice(HorrorIndex.first, HorrorIndex.last).map(
+              (lst, index) => (
+                <Block>
+                  {HorrorIndex.first == 0 && index == 0 ? (
                     <p>{lst}</p>
                   ) : (
                     <PosterImg
@@ -387,18 +444,7 @@ function Main() {
             </SliderButton>
           </BlocksWrapper>
 
-          <BlocksWrapper>
-            <SliderButton onClick={() => nextPage("HORROR", "prev")}>
-              <span>&#8592;</span>
-            </SliderButton>
-            {HORROR.slice(HorrorIndex.first, HorrorIndex.last).map((img) => (
-              <Block>{img}</Block>
-            ))}
-            <SliderButton onClick={() => nextPage("HORROR", "next")}>
-              <span>&#8594;</span>
-            </SliderButton>
-          </BlocksWrapper>
-
+         
          
           <BlocksWrapper>
             <SliderButton onClick={() => nextPage("ANIMATION", "prev")}>
