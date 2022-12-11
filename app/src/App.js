@@ -15,6 +15,7 @@ import Onedollarlawyer from "./movieDetails/drama/onedollarlowyer";
 import Lacasadepapel from "./movieDetails/drama/lacasadepapel";
 import Stoveleague from "./movieDetails/drama/stoveleague";
 import Thegoldenspoon from "./movieDetails/drama/thegoldenspoon";
+import Rebornrich from "./movieDetails/drama/rebornrich";
 import Annabelle from "./movieDetails/horror/annabelle";
 import Theconjuring from "./movieDetails/horror/theconjuring";
 import Thenun from "./movieDetails/horror/thenun";
@@ -55,6 +56,7 @@ function App() {
       <Route exact path="/movie/horror/theconjuring" element={<Theconjuring />} />
       <Route exact path="/movie/horror/thenun" element={<Thenun />} />
       <Route exact path="/movie/horror/it" element={<It />} />
+      <Route exact path="/movie/drama/rebornrich" element={<Rebornrich />} />
     </Routes>
   );
 }

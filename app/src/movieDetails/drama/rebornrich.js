@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import FooterImg from "../../images/footer.jpeg";
 import RoundedsquareImg from "../../images/roundedsquare.png";
-import OnedollarlawyerImg from "../../images/onedollarlawyer.jpeg";
+import RebornrichImg from "../../images/rebornrich.jpeg";
 import TriangleImg from "../../images/triangle.png";
 import PrevImg from "../../images/back.jpeg";
 import Dropdown from "react-bootstrap/Dropdown";
@@ -70,18 +70,14 @@ const IntroductionWrapper = styled.div`
 const Introduction = styled.div`
   font-size: 18px;
 `;
-function Onedollarlawyer() {
+function Rebornrich() {
   const [episode, setEpisode] = useState("season I");
 
   const [episodeData, setEpisodeData] = useState({
     "season I": {
       introduction:
-        "The series depicts the story of a lawyer who has the best skills but only charges 1000 won as his attorney's fee.",
-    },
-    "season II": {
-      introduction: "",
-   
-    },
+        "",
+    }
   });
   const onClickEpisode = (e) => {
     const { name } = e.target;
@@ -92,7 +88,7 @@ function Onedollarlawyer() {
     <Wrapper>
       <Header></Header>
       <BodyContainer>
-        <MainImage src={OnedollarlawyerImg} />
+        <MainImage src={RebornrichImg} />
       </BodyContainer>
       <ScenarioContainer></ScenarioContainer>
 
@@ -114,4 +110,4 @@ function Onedollarlawyer() {
   );
 }
 
-export default Onedollarlawyer;
+export default Rebornrich;

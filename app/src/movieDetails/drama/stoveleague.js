@@ -76,7 +76,7 @@ function Stoveleague() {
   const [episodeData, setEpisodeData] = useState({
     "season I": {
       introduction:
-        "",
+        "The Dreams are a Korean professional baseball team that have placed last in the league for the past four seasons. When their general manager steps down, the team hires Baek Seung-soo, who has managed several championship winning sports teams, as his replacement, despite Seung-soo having zero experience with managing a baseball team. Facing shrinking budgets, infighting between the coaching staff and a team deeply set in their ways, Seung-soo uses his outsider's insight and the help of operations manager Se-young and Jae-hee to upend the Dreams' culture in a bid to create a championship winning team, despite the looming fact that every team he has managed before has folded after winning the championship.",
     },
     "season II": {
       introduction: "",
