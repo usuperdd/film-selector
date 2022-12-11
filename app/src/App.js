@@ -20,6 +20,8 @@ import Annabelle from "./movieDetails/horror/annabelle";
 import Theconjuring from "./movieDetails/horror/theconjuring";
 import Thenun from "./movieDetails/horror/thenun";
 import It from "./movieDetails/horror/it";
+import Chainsawman from "./movieDetails/animation/chainsawman";
+
 
 
 function App() {
@@ -57,6 +59,7 @@ function App() {
       <Route exact path="/movie/horror/thenun" element={<Thenun />} />
       <Route exact path="/movie/horror/it" element={<It />} />
       <Route exact path="/movie/drama/rebornrich" element={<Rebornrich />} />
+      <Route exact path="/movie/animation/chainsawman" element={<Chainsawman />} />
     </Routes>
   );
 }
