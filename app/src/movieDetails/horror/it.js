@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import FooterImg from "../../images/footer.jpeg";
 import RoundedsquareImg from "../../images/roundedsquare.png";
-import LacasadepapelImg from "../../images/lacasadepapel.jpeg";
+import ItImg from "../../images/it.jpeg";
 import TriangleImg from "../../images/triangle.png";
 import PrevImg from "../../images/back.jpeg";
 import Dropdown from "react-bootstrap/Dropdown";
@@ -70,31 +70,19 @@ const IntroductionWrapper = styled.div`
 const Introduction = styled.div`
   font-size: 18px;
 `;
-function Lacasadepapel() {
-  const [episode, setEpisode] = useState("part I");
+function It() {
+  const [episode, setEpisode] = useState("It");
 
   const [episodeData, setEpisodeData] = useState({
-    "part I": {
+    "It": {
       introduction:
-        "The Professor recruits a young female robber and seven other criminals for a grand heist, targeting the Royal Mint of Spain.",
+      "In the summer of 1989, a group of bullied kids band together to destroy a shape-shifting monster, which disguises itself as a clown and preys on the children of Derry, their small Maine town.",
     },
-    "part II": {
-      introduction: "The police finds the house where The Professor has planned everything. Tokyo and Berlin are fighting about how to proceed.",
-   
-    },
-    "part III": {
-        introduction: "When Rio is captured, a distraught Tokyo turns to the Professor for help. Armed with a bold new plan, they reunite the team in order to rescue him.",
-     
-      },
-      "part IV": {
-        introduction: "Anger and grief heighten tensions between the group. The Professor, while in mourning, attempts to make a daring and dangerous escape.",
-     
-      },
-      "part V": {
-        introduction: "The Professor faces off with Sierra as Tamayo raises the stakes of the negotiations by calling the army. In the past, Berlin meets with a family member.",
-     
-      },
-  });
+    "It Chapter Two": {
+      introduction:
+      "Twenty-seven years after their first encounter with the terrifying Pennywise, the Losers Club have grown up and moved away, until a devastating phone call brings them back.",
+    }
+    });
   const onClickEpisode = (e) => {
     const { name } = e.target;
 
@@ -104,30 +92,20 @@ function Lacasadepapel() {
     <Wrapper>
       <Header></Header>
       <BodyContainer>
-        <MainImage src={LacasadepapelImg} />
+        <MainImage src={ItImg} />
       </BodyContainer>
       <ScenarioContainer></ScenarioContainer>
 
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
-          <Dropdown.Item name="part I" onClick={onClickEpisode}>
-            part I
+          <Dropdown.Item name="It" onClick={onClickEpisode}>
+           It
           </Dropdown.Item>
-          <Dropdown.Item name="part II" onClick={onClickEpisode}>
-            part II
-          </Dropdown.Item>
-          <Dropdown.Item name="part III" onClick={onClickEpisode}>
-            part III
-          </Dropdown.Item>
-          <Dropdown.Item name="part IV" onClick={onClickEpisode}>
-            part IV
-          </Dropdown.Item>
-          <Dropdown.Item name="part V" onClick={onClickEpisode}>
-            part V
+          <Dropdown.Item name="It Chapter Two" onClick={onClickEpisode}>
+           It Chapter Two
           </Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>
-
       <IntroductionWrapper>
         <Introduction>{episodeData[episode]["introduction"]}</Introduction>
       </IntroductionWrapper>
@@ -135,4 +113,4 @@ function Lacasadepapel() {
   );
 }
 
-export default Lacasadepapel;
+export default It;

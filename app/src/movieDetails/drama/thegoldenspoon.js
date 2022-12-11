@@ -75,10 +75,10 @@ function Thegoldenspoon() {
   const [episodeData, setEpisodeData] = useState({
     "part I(Ep 1 ~ Ep 8)": {
       introduction:
-        "",
+        "Lee Seung-cheon, a child born in a poor family, who changes fate with a friend, Hwang Taeyong who was born in a wealthy family through a golden spoon and becomes an acquired gold spoon",
     },
     "part II(Ep 9 ~ Ep 16)": {
-      introduction: "",
+      introduction: "Lee Seung-cheon lives in Hwang Tae-yong's name and enjoys all kinds of wealth, but soon begins to learn the truth of Hwang Tae-yong's family...",
    
     },
   });
