@@ -377,7 +377,7 @@ function Main() {
                 </Block>
               )
             )}
-            <SliderButton onClick={() => nextPage("DRAMA", "next")}>
+            <SliderButton onClick={() => nextPage("HORROR", "next")}>
               <span>&#8594;</span>
             </SliderButton>
           </BlocksWrapper>
