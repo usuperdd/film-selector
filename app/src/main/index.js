@@ -17,6 +17,8 @@ import ItImg from "../images/it.jpeg";
 import TheconjuringImg from "../images/theconjuring.jpeg";
 import ThenunImg from "../images/thenun.jpeg";
 import AttackontitanImg from "../images/attackontitan.jpeg";
+import ChainsawmanImg from "../images/chainsawman.jpeg";
+import AvatarImg from "../images/avatar.jpeg";
 
 import { useNavigate } from "react-router-dom";
 
@@ -182,13 +184,23 @@ function Main() {
       image: `${AttackontitanImg}`,
       link: "/movie/animation/attackontitan",
     },
+    {
+      image: `${ChainsawmanImg}`,
+      link: "/movie/animation/chainsawman",
+    },
   ];
-
-  const ACTION = ["ACTION", 2, 3, 4, 5, 6, 7, 8];
-  const COMEDY = ["COMEDY", 2, 3, 4, 5, 6, 7, 8];
-  const ROMANCE = ["ROMANCE", 2, 3, 4, 5, 6, 7, 8];
-  const FANTASY = ["FANTASY", 2, 3, 4, 5, 6, 7, 8];
-  const SPORTS = ["SPORTS", 2, 3, 4, 5, 6, 7, 8];
+  const FANTASY = [
+    "FANTASY",
+    {
+      image: `${AvatarImg}`,
+      link: "/movie/fantasy/avatar",
+    },
+  ];
+  // const ACTION = ["ACTION", 2, 3, 4, 5, 6, 7, 8];
+  // const COMEDY = ["COMEDY", 2, 3, 4, 5, 6, 7, 8];
+  // const ROMANCE = ["ROMANCE", 2, 3, 4, 5, 6, 7, 8];
+  // const FANTASY = ["FANTASY", 2, 3, 4, 5, 6, 7, 8];
+  // const SPORTS = ["SPORTS", 2, 3, 4, 5, 6, 7, 8];
 
   const nextPage = (type, action) => {
     if (type == "SF") {
@@ -310,23 +322,45 @@ function Main() {
         });
       }
     }
+  };
+  const navigateToMovie = (link) => {
+    navigate(link);
+  };
+  return (
+    <Wrapper>
+      <Header></Header>
+      <ImageContainer></ImageContainer>
+      <BodyContainer>
+        <CommunityWrapper>
+          <BlocksWrapper>
+            <SliderButton onClick={() => nextPage("SF", "prev")}>
+              <span>&#8592;</span>
+            </SliderButton>
+            {SF.slice(SFIndex.first, SFIndex.last).map((lst, index) => (
+              <Block>
+                {SFIndex.first == 0 && index == 0 ? (
+                  <p>{lst}</p>
+                ) : (
+                  <PosterImg
+                    src={lst.image}
+                    onClick={() => navigateToMovie(lst.link)}
+                  ></PosterImg>
+                )}
+              </Block>
+            ))}
+            <SliderButton onClick={() => nextPage("SF", "next")}>
+              <span>&#8594;</span>
+            </SliderButton>
+          </BlocksWrapper>
 
-    const navigateToMovie = (link) => {
-      navigate(link);
-    };
-    return (
-      <Wrapper>
-        <Header></Header>
-        <ImageContainer></ImageContainer>
-        <BodyContainer>
-          <CommunityWrapper>
-            <BlocksWrapper>
-              <SliderButton onClick={() => nextPage("SF", "prev")}>
-                <span>&#8592;</span>
-              </SliderButton>
-              {SF.slice(SFIndex.first, SFIndex.last).map((lst, index) => (
+          <BlocksWrapper>
+            <SliderButton onClick={() => nextPage("DRAMA", "prev")}>
+              <span>&#8592;</span>
+            </SliderButton>
+            {DRAMA.slice(DramaIndex.first, DramaIndex.last).map(
+              (lst, index) => (
                 <Block>
-                  {SFIndex.first == 0 && index == 0 ? (
+                  {DramaIndex.first == 0 && index == 0 ? (
                     <p>{lst}</p>
                   ) : (
                     <PosterImg
@@ -335,84 +369,85 @@ function Main() {
                     ></PosterImg>
                   )}
                 </Block>
-              ))}
-              <SliderButton onClick={() => nextPage("SF", "next")}>
-                <span>&#8594;</span>
-              </SliderButton>
-            </BlocksWrapper>
+              )
+            )}
+            <SliderButton onClick={() => nextPage("DRAMA", "next")}>
+              <span>&#8594;</span>
+            </SliderButton>
+          </BlocksWrapper>
 
-            <BlocksWrapper>
-              <SliderButton onClick={() => nextPage("DRAMA", "prev")}>
-                <span>&#8592;</span>
-              </SliderButton>
-              {DRAMA.slice(DramaIndex.first, DramaIndex.last).map(
-                (lst, index) => (
-                  <Block>
-                    {DramaIndex.first == 0 && index == 0 ? (
-                      <p>{lst}</p>
-                    ) : (
-                      <PosterImg
-                        src={lst.image}
-                        onClick={() => navigateToMovie(lst.link)}
-                      ></PosterImg>
-                    )}
-                  </Block>
-                )
-              )}
-              <SliderButton onClick={() => nextPage("DRAMA", "next")}>
-                <span>&#8594;</span>
-              </SliderButton>
-            </BlocksWrapper>
+          <BlocksWrapper>
+            <SliderButton onClick={() => nextPage("HORROR", "prev")}>
+              <span>&#8592;</span>
+            </SliderButton>
+            {HORROR.slice(HorrorIndex.first, HorrorIndex.last).map(
+              (lst, index) => (
+                <Block>
+                  {HorrorIndex.first == 0 && index == 0 ? (
+                    <p>{lst}</p>
+                  ) : (
+                    <PosterImg
+                      src={lst.image}
+                      onClick={() => navigateToMovie(lst.link)}
+                    ></PosterImg>
+                  )}
+                </Block>
+              )
+            )}
+            <SliderButton onClick={() => nextPage("HORROR", "next")}>
+              <span>&#8594;</span>
+            </SliderButton>
+          </BlocksWrapper>
 
-            <BlocksWrapper>
-              <SliderButton onClick={() => nextPage("HORROR", "prev")}>
-                <span>&#8592;</span>
-              </SliderButton>
-              {HORROR.slice(HorrorIndex.first, HorrorIndex.last).map(
-                (lst, index) => (
-                  <Block>
-                    {HorrorIndex.first == 0 && index == 0 ? (
-                      <p>{lst}</p>
-                    ) : (
-                      <PosterImg
-                        src={lst.image}
-                        onClick={() => navigateToMovie(lst.link)}
-                      ></PosterImg>
-                    )}
-                  </Block>
-                )
-              )}
-              <SliderButton onClick={() => nextPage("HORROR", "next")}>
-                <span>&#8594;</span>
-              </SliderButton>
-            </BlocksWrapper>
+          <BlocksWrapper>
+            <SliderButton onClick={() => nextPage("ANIMATION", "prev")}>
+              <span>&#8592;</span>
+            </SliderButton>
+            {ANIMATION.slice(AnimationIndex.first, AnimationIndex.last).map(
+              (lst, index) => (
+                <Block>
+                  {AnimationIndex.first == 0 && index == 0 ? (
+                    <p>{lst}</p>
+                  ) : (
+                    <PosterImg
+                      src={lst.image}
+                      onClick={() => navigateToMovie(lst.link)}
+                    ></PosterImg>
+                  )}
+                </Block>
+              )
+            )}
+            <SliderButton onClick={() => nextPage("ANIMATION", "next")}>
+              <span>&#8594;</span>
+            </SliderButton>
+          </BlocksWrapper>
 
-            <BlocksWrapper>
-              <SliderButton onClick={() => nextPage("ANIMATION", "prev")}>
-                <span>&#8592;</span>
-              </SliderButton>
-              {ANIMATION.slice(AnimationIndex.first, AnimationIndex.last).map(
-                (lst, index) => (
-                  <Block>
-                    {AnimationIndex.first == 0 && index == 0 ? (
-                      <p>{lst}</p>
-                    ) : (
-                      <PosterImg
-                        src={lst.image}
-                        onClick={() => navigateToMovie(lst.link)}
-                      ></PosterImg>
-                    )}
-                  </Block>
-                )
-              )}
-              <SliderButton onClick={() => nextPage("ANIMATION", "next")}>
-                <span>&#8594;</span>
-              </SliderButton>
-            </BlocksWrapper>
-          </CommunityWrapper>
-        </BodyContainer>
-      </Wrapper>
-    );
-  };
+          <BlocksWrapper>
+            <SliderButton onClick={() => nextPage("FANTASY", "prev")}>
+              <span>&#8592;</span>
+            </SliderButton>
+            {FANTASY.slice(FanatasyIndex.first, FanatasyIndex.last).map(
+              (lst, index) => (
+                <Block>
+                  {FanatasyIndex.first == 0 && index == 0 ? (
+                    <p>{lst}</p>
+                  ) : (
+                    <PosterImg
+                      src={lst.image}
+                      onClick={() => navigateToMovie(lst.link)}
+                    ></PosterImg>
+                  )}
+                </Block>
+              )
+            )}
+            <SliderButton onClick={() => nextPage("FANTASY", "next")}>
+              <span>&#8594;</span>
+            </SliderButton>
+          </BlocksWrapper>
+        </CommunityWrapper>
+      </BodyContainer>
+    </Wrapper>
+  );
 }
+
 export default Main;
