@@ -23,6 +23,10 @@ import It from "./movieDetails/horror/it";
 import Chainsawman from "./movieDetails/animation/chainsawman";
 import Attackontitan from "./movieDetails/animation/attackontitan";
 import Avatar from "./movieDetails/fantasy/avatar";
+import Harrypotter from "./movieDetails/fantasy/harrypotter";
+import Fantasticsbeasts from "./movieDetails/fantasy/fantasticbeasts";
+import Thelordoftherings from "./movieDetails/fantasy/thelordoftherings";
+import Homealone from "./movieDetails/comedy/homealone";
 
 
 
@@ -65,6 +69,9 @@ function App() {
       <Route exact path="/movie/animation/chainsawman" element={<Chainsawman />} />
       <Route exact path="/movie/animation/attackontitan" element={<Attackontitan />} />
       <Route exact path="/movie/fantasy/avatar" element={<Avatar />} />
+      <Route exact path="/movie/fantasy/fantasticbeasts" element={<Fantasticsbeasts />} />
+      <Route exact path="/movie/fantasy/thelordoftherings" element={<Thelordoftherings />} />
+      <Route exact path="/movie/comedy/homealone" element={<Homealone />} />
     </Routes>
   );
 }
