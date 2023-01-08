@@ -219,6 +219,10 @@ function Main() {
       image: `${HomealoneImg}`,
       link: "/movie/comedy/homealone",
     },
+    {
+      image: `${HomealoneImg}`,
+      link: "/movie/comedy/homealone",
+    },
   ];
 
   // const ACTION = ["ACTION", 2, 3, 4, 5, 6, 7, 8];
