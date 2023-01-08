@@ -208,8 +208,8 @@ function Main() {
       link: "/movie/fantasy/thelordoftherings",
     },
     {
-      image: `${ThelordoftheringsImg}`,
-      link: "/movie/fantasy/thelordoftherings",
+      image: `${HarrypotterImg}`,
+      link: "/movie/fantasy/harrypoter",
     },
   ];
 
