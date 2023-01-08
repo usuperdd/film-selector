@@ -19,6 +19,9 @@ import ThenunImg from "../images/thenun.jpeg";
 import AttackontitanImg from "../images/attackontitan.jpeg";
 import ChainsawmanImg from "../images/chainsawman.jpeg";
 import AvatarImg from "../images/avatar.jpeg";
+import FantasticbeastsImg from "../images/fantasticbeasts.jpeg";
+import ThelordoftheringsImg from "../images/thelordoftherings.jpeg";
+import HomealoneImg from "../images/homealone.jpeg";
 
 import { useNavigate } from "react-router-dom";
 
@@ -195,11 +198,27 @@ function Main() {
       image: `${AvatarImg}`,
       link: "/movie/fantasy/avatar",
     },
+    {
+      image: `${FantasticbeastsImg}`,
+      link: "/movie/fantasy/fantasticbeasts",
+    },
+    {
+      image: `${ThelordoftheringsImg}`,
+      link: "/movie/fantasy/thelordoftherings",
+    },
   ];
+
+  const COMEDY = [
+    "COMEDY",
+    {
+      image: `${HomealoneImg}`,
+      link: "/movie/comedy/homealone",
+    },
+  ];
+
   // const ACTION = ["ACTION", 2, 3, 4, 5, 6, 7, 8];
-  // const COMEDY = ["COMEDY", 2, 3, 4, 5, 6, 7, 8];
+
   // const ROMANCE = ["ROMANCE", 2, 3, 4, 5, 6, 7, 8];
-  // const FANTASY = ["FANTASY", 2, 3, 4, 5, 6, 7, 8];
   // const SPORTS = ["SPORTS", 2, 3, 4, 5, 6, 7, 8];
 
   const nextPage = (type, action) => {
@@ -441,6 +460,29 @@ function Main() {
               )
             )}
             <SliderButton onClick={() => nextPage("FANTASY", "next")}>
+              <span>&#8594;</span>
+            </SliderButton>
+          </BlocksWrapper>
+
+          <BlocksWrapper>
+            <SliderButton onClick={() => nextPage("COMEDY", "prev")}>
+              <span>&#8592;</span>
+            </SliderButton>
+            {COMEDY.slice(ComedyIndex.first, ComedyIndex.last).map(
+              (lst, index) => (
+                <Block>
+                  {ComedyIndex.first == 0 && index == 0 ? (
+                    <p>{lst}</p>
+                  ) : (
+                    <PosterImg
+                      src={lst.image}
+                      onClick={() => navigateToMovie(lst.link)}
+                    ></PosterImg>
+                  )}
+                </Block>
+              )
+            )}
+            <SliderButton onClick={() => nextPage("COMEDY", "next")}>
               <span>&#8594;</span>
             </SliderButton>
           </BlocksWrapper>
