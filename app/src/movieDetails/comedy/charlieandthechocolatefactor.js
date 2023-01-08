@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import FooterImg from "../../images/footer.jpeg";
 import RoundedsquareImg from "../../images/roundedsquare.png";
-import HomealoneImg from "../../images/homealone.jpeg";
+import CharlieImg from "../../images/charlie.jpeg";
 import TriangleImg from "../../images/triangle.png";
 import PrevImg from "../../images/back.jpeg";
 import Dropdown from "react-bootstrap/Dropdown";
@@ -70,21 +70,13 @@ const IntroductionWrapper = styled.div`
 const Introduction = styled.div`
   font-size: 18px;
 `;
-function Homealone() {
-  const [episode, setEpisode] = useState("Home Alone");
+function Charlieandthechocolatefactory() {
+  const [episode, setEpisode] = useState("Charlie and the chocolate factory");
 
   const [episodeData, setEpisodeData] = useState({
-    "Home Alone": {
+    "Charlie and the chocolate factory": {
       introduction:
-        "An eight-year-old troublemaker, mistakenly left home alone, must defend his home against a pair of burglars on Christmas eve.",
-    },
-    "Home Alone 2: Lost in New York": {
-      introduction:
-        "One year after Kevin McCallister was left home alone and had to defeat a pair of bumbling burglars, he accidentally finds himself stranded in New York City - and the same criminals are not far behind.",
-    },
-    "Home Alone 3": {
-      introduction:
-        "Alex Pruitt, an 8-year-old boy living in Chicago, must fend off international spies who seek a top-secret computer chip in his toy car.",
+        "A young boy wins a tour through the most magnificent chocolate factory in the world, led by the world's most unusual candy maker.",
     },
   });
   const onClickEpisode = (e) => {
@@ -96,20 +88,14 @@ function Homealone() {
     <Wrapper>
       <Header></Header>
       <BodyContainer>
-        <MainImage src={HomealoneImg} />
+        <MainImage src={CharlieImg} />
       </BodyContainer>
       <ScenarioContainer></ScenarioContainer>
 
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
-          <Dropdown.Item name="Home Alone" onClick={onClickEpisode}>
-          Home Alone
-          </Dropdown.Item>
-          <Dropdown.Item name="Home Alone 2: Lost in New York" onClick={onClickEpisode}>
-          Home Alone 2: Lost in New York
-          </Dropdown.Item>
-          <Dropdown.Item name="Home Alone 3" onClick={onClickEpisode}>
-          Home Alone 3
+          <Dropdown.Item name="Charlie and the chocolate factory" onClick={onClickEpisode}>
+          Charlie and the chocolate factory
           </Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>
@@ -121,5 +107,5 @@ function Homealone() {
   );
 }
 
-export default Homealone;
+export default Charlieandthechocolatefactory;
 

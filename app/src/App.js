@@ -27,8 +27,7 @@ import Harrypotter from "./movieDetails/fantasy/harrypotter";
 import Fantasticsbeasts from "./movieDetails/fantasy/fantasticbeasts";
 import Thelordoftherings from "./movieDetails/fantasy/thelordoftherings";
 import Homealone from "./movieDetails/comedy/homealone";
-
-
+import Charlieandthechocolatefactory from "./movieDetails/comedy/charlieandthechocolatefactor";
 
 
 function App() {
@@ -69,9 +68,11 @@ function App() {
       <Route exact path="/movie/animation/chainsawman" element={<Chainsawman />} />
       <Route exact path="/movie/animation/attackontitan" element={<Attackontitan />} />
       <Route exact path="/movie/fantasy/avatar" element={<Avatar />} />
+      <Route exact path="/movie/fantasy/harrypotter" element={<Harrypotter />} />
       <Route exact path="/movie/fantasy/fantasticbeasts" element={<Fantasticsbeasts />} />
       <Route exact path="/movie/fantasy/thelordoftherings" element={<Thelordoftherings />} />
       <Route exact path="/movie/comedy/homealone" element={<Homealone />} />
+      <Route exact path="/movie/comedy/charlieandthechocolatefactory" element={<Charlieandthechocolatefactory />} />
     </Routes>
   );
 }
