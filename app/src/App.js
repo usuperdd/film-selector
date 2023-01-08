@@ -28,7 +28,8 @@ import Fantasticsbeasts from "./movieDetails/fantasy/fantasticbeasts";
 import Thelordoftherings from "./movieDetails/fantasy/thelordoftherings";
 import Homealone from "./movieDetails/comedy/homealone";
 import Charlieandthechocolatefactory from "./movieDetails/comedy/charlieandthechocolatefactor";
-
+import Badboys from "./movieDetails/comedy/badboys";
+import Parasite from "./movieDetails/comedy/parasite";
 
 function App() {
   return (
@@ -73,6 +74,8 @@ function App() {
       <Route exact path="/movie/fantasy/thelordoftherings" element={<Thelordoftherings />} />
       <Route exact path="/movie/comedy/homealone" element={<Homealone />} />
       <Route exact path="/movie/comedy/charlieandthechocolatefactory" element={<Charlieandthechocolatefactory />} />
+      <Route exact path="/movie/comedy/badboys" element={<Badboys />} />
+      <Route exact path="/movie/comedy/parasite" element={<Parasite />} />
     </Routes>
   );
 }
