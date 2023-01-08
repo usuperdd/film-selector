@@ -102,9 +102,9 @@ function Harrypotter() {
         introduction:
         "As Harry, Ron and Hermione race against time and evil to destroy the Horcruxes, they uncover the existence of the three most powerful objects in the wizarding world: the Deathly Hallows.",
     },
-    "Harry Potter and the Deathly Hallows - Part 2": {
+    "Harry Potter and the Deathly Hallows: Part 2": {
         introduction:
-        "Harry, Ron, and Hermione search for Voldemort's remaining Horcruxes in their effort to destroy the Dark Lord as the final battle rages on at Hogwarts.",
+        "Harry, Ron, and Hermione search for Voldemort's remaining Horcruxes in their effort to destroy the Dark Lord as the final battle rages on at Hogwarts."
     }
   });
   const onClickEpisode = (e) => {
@@ -150,8 +150,7 @@ function Harrypotter() {
       </SliderWrapper>
 
       <IntroductionWrapper>
-        <Introduction>{episodeData[episode]["introduction"]}
-        </Introduction>
+        <Introduction>{episodeData[episode]["introduction"]}</Introduction>
       </IntroductionWrapper>
     </Wrapper>
   );
