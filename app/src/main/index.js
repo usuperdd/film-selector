@@ -22,6 +22,7 @@ import AvatarImg from "../images/avatar.jpeg";
 import FantasticbeastsImg from "../images/fantasticbeasts.jpeg";
 import ThelordoftheringsImg from "../images/thelordoftherings.jpeg";
 import HomealoneImg from "../images/homealone.jpeg";
+import HarrypotterImg from "../images/harrypotter.jpeg";
 
 import { useNavigate } from "react-router-dom";
 
@@ -201,6 +202,10 @@ function Main() {
     {
       image: `${FantasticbeastsImg}`,
       link: "/movie/fantasy/fantasticbeasts",
+    },
+    {
+      image: `${ThelordoftheringsImg}`,
+      link: "/movie/fantasy/thelordoftherings",
     },
     {
       image: `${ThelordoftheringsImg}`,
