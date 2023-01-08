@@ -69,6 +69,7 @@ function App() {
       <Route exact path="/movie/animation/chainsawman" element={<Chainsawman />} />
       <Route exact path="/movie/animation/attackontitan" element={<Attackontitan />} />
       <Route exact path="/movie/fantasy/avatar" element={<Avatar />} />
+      <Route exact path="/movie/fantasy/harrypotter" element={<Harrypotter />} />
       <Route exact path="/movie/fantasy/fantasticbeasts" element={<Fantasticsbeasts />} />
       <Route exact path="/movie/fantasy/thelordoftherings" element={<Thelordoftherings />} />
       <Route exact path="/movie/comedy/homealone" element={<Homealone />} />
