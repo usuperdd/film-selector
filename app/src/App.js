@@ -30,6 +30,10 @@ import Homealone from "./movieDetails/comedy/homealone";
 import Charlieandthechocolatefactory from "./movieDetails/comedy/charlieandthechocolatefactor";
 import Badboys from "./movieDetails/comedy/badboys";
 import Parasite from "./movieDetails/comedy/parasite";
+import Coachcarter from "./movieDetails/sports/coachcarter";
+import Perfectgame from "./movieDetails/sports/perfectgame";
+import Fordvferrari from "./movieDetails/sports/fordvferrari";
+import Topgun from "./movieDetails/action/topgun";
 
 function App() {
   return (
@@ -76,6 +80,10 @@ function App() {
       <Route exact path="/movie/comedy/charlieandthechocolatefactory" element={<Charlieandthechocolatefactory />} />
       <Route exact path="/movie/comedy/badboys" element={<Badboys />} />
       <Route exact path="/movie/comedy/parasite" element={<Parasite />} />
+      <Route exact path="/movie/sports/coachcarter" element={<Coachcarter />} />
+      <Route exact path="/movie/sports/perfectgame" element={<Perfectgame />} />
+      <Route exact path="/movie/sports/fordvferrari" element={<Fordvferrari />} />
+      <Route exact path="/movie/action/topgun" element={<Topgun />} />
     </Routes>
   );
 }

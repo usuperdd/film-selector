@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import FooterImg from "../../images/footer.jpeg";
 import RoundedsquareImg from "../../images/roundedsquare.png";
-import CoachcarterImg from "../../images/coachcarter.jpeg";
+import TopgunImg from "../../images/topgun.jpeg";
 import TriangleImg from "../../images/triangle.png";
 import PrevImg from "../../images/back.jpeg";
 import Dropdown from "react-bootstrap/Dropdown";
@@ -70,14 +70,20 @@ const IntroductionWrapper = styled.div`
 const Introduction = styled.div`
   font-size: 18px;
 `;
-function Coachcarter() {
-  const [episode, setEpisode] = useState("Coach Carter");
+function Topgun() {
+  const [episode, setEpisode] = useState(
+    "TOP GUN"
+  );
 
   const [episodeData, setEpisodeData] = useState({
-    "Coach Carter": {
+    "TOP GUN": {
       introduction:
-        "Controversy surrounds high school basketball coach Ken Carter after he benches his entire team for breaking their academic contract with him.",
+        "As students at the United States Navy's elite fighter weapons school compete to be best in the class, one daring young pilot learns a few things from a civilian instructor that are not taught in the classroom.",
     },
+    "TOP GUN : MAVERICK": {
+      introduction:
+        "After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to fly it.",
+   },
   });
   const onClickEpisode = (e) => {
     const { name } = e.target;
@@ -88,14 +94,23 @@ function Coachcarter() {
     <Wrapper>
       <Header></Header>
       <BodyContainer>
-        <MainImage src={CoachcarterImg} />
+        <MainImage src={TopgunImg} />
       </BodyContainer>
       <ScenarioContainer></ScenarioContainer>
 
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
-          <Dropdown.Item name="Coach Carter" onClick={onClickEpisode}>
-          Coach Carter
+          <Dropdown.Item
+            name="TOP GUN"
+            onClick={onClickEpisode}
+        >
+            TOP GUN
+          </Dropdown.Item>
+          <Dropdown.Item
+            name="TOP GUN : MAVERICK"
+            onClick={onClickEpisode}
+          >
+            TOP GUN : MAVERICK
           </Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>
@@ -107,5 +122,4 @@ function Coachcarter() {
   );
 }
 
-export default Coachcarter;
-
+export default Topgun;

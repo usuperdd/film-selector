@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import FooterImg from "../../images/footer.jpeg";
 import RoundedsquareImg from "../../images/roundedsquare.png";
-import CoachcarterImg from "../../images/coachcarter.jpeg";
+import FordvferrariImg from "../../images/fordvferrari.jpeg";
 import TriangleImg from "../../images/triangle.png";
 import PrevImg from "../../images/back.jpeg";
 import Dropdown from "react-bootstrap/Dropdown";
@@ -70,13 +70,13 @@ const IntroductionWrapper = styled.div`
 const Introduction = styled.div`
   font-size: 18px;
 `;
-function Coachcarter() {
-  const [episode, setEpisode] = useState("Coach Carter");
+function Fordvferrari() {
+  const [episode, setEpisode] = useState("Ford V Ferrari");
 
   const [episodeData, setEpisodeData] = useState({
-    "Coach Carter": {
+    "Ford V Ferrari": {
       introduction:
-        "Controversy surrounds high school basketball coach Ken Carter after he benches his entire team for breaking their academic contract with him.",
+        "American car designer Carroll Shelby and driver Ken Miles battle corporate interference and the laws of physics to build a revolutionary race car for Ford in order to defeat Ferrari at the 24 Hours of Le Mans in 1966.",
     },
   });
   const onClickEpisode = (e) => {
@@ -88,14 +88,14 @@ function Coachcarter() {
     <Wrapper>
       <Header></Header>
       <BodyContainer>
-        <MainImage src={CoachcarterImg} />
+        <MainImage src={FordvferrariImg} />
       </BodyContainer>
       <ScenarioContainer></ScenarioContainer>
 
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
-          <Dropdown.Item name="Coach Carter" onClick={onClickEpisode}>
-          Coach Carter
+          <Dropdown.Item name="Ford V Ferrari" onClick={onClickEpisode}>
+          Ford V Ferrari
           </Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>
@@ -107,5 +107,4 @@ function Coachcarter() {
   );
 }
 
-export default Coachcarter;
-
+export default Fordvferrari;
