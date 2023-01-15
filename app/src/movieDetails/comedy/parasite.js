@@ -14,7 +14,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import "../index.css"; //
 
 const Wrapper = styled.div`
-  height: 100%;
+  height: 100vh;
   background-color: #001f3f;
   color: white;
   padding-bottom: 30px;
@@ -74,7 +74,7 @@ function Parasite() {
   const [episode, setEpisode] = useState("Parasite");
 
   const [episodeData, setEpisodeData] = useState({
-    "Parasite": {
+    Parasite: {
       introduction:
         "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan.",
     },
@@ -95,7 +95,7 @@ function Parasite() {
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
           <Dropdown.Item name="Parasite" onClick={onClickEpisode}>
-          Parasite
+            Parasite
           </Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>
@@ -108,4 +108,3 @@ function Parasite() {
 }
 
 export default Parasite;
-

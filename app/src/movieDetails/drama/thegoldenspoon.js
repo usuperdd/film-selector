@@ -13,7 +13,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import "../index.css"; //
 
 const Wrapper = styled.div`
-  height: 100%;
+  height: 100vh;
   background-color: #001f3f;
   color: white;
   padding-bottom: 30px;
@@ -78,8 +78,8 @@ function Thegoldenspoon() {
         "Lee Seung-cheon, a child born in a poor family, who changes fate with a friend, Hwang Taeyong who was born in a wealthy family through a golden spoon and becomes an acquired gold spoon",
     },
     "part II(Ep 9 ~ Ep 16)": {
-      introduction: "Lee Seung-cheon lives in Hwang Tae-yong's name and enjoys all kinds of wealth, but soon begins to learn the truth of Hwang Tae-yong's family...",
-   
+      introduction:
+        "Lee Seung-cheon lives in Hwang Tae-yong's name and enjoys all kinds of wealth, but soon begins to learn the truth of Hwang Tae-yong's family...",
     },
   });
   const onClickEpisode = (e) => {

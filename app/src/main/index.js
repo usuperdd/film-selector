@@ -24,6 +24,7 @@ import ThelordoftheringsImg from "../images/thelordoftherings.jpeg";
 import HomealoneImg from "../images/homealone.jpeg";
 import HarrypotterImg from "../images/harrypotter.jpeg";
 import CharlieImg from "../images/charlie.jpeg";
+import ParasiteImg from "../images/parasite.jpeg";
 
 import { useNavigate } from "react-router-dom";
 
@@ -223,6 +224,10 @@ function Main() {
     {
       image: `${CharlieImg}`,
       link: "/movie/comedy/charlieandthechocolatefactory",
+    },
+    {
+      image: `${ParasiteImg}`,
+      link: "/movie/comedy/parasite",
     },
   ];
 

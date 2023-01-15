@@ -14,7 +14,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import "../index.css"; //
 
 const Wrapper = styled.div`
-  height: 100%;
+  height: 100vh;
   background-color: #001f3f;
   color: white;
   padding-bottom: 30px;
@@ -75,9 +75,8 @@ function Rebornrich() {
 
   const [episodeData, setEpisodeData] = useState({
     "season I": {
-      introduction:
-        "",
-    }
+      introduction: "",
+    },
   });
   const onClickEpisode = (e) => {
     const { name } = e.target;

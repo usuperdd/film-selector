@@ -14,7 +14,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import "../index.css"; //
 
 const Wrapper = styled.div`
-  height: 100%;
+  height: 100vh;
   background-color: #001f3f;
   color: white;
   padding-bottom: 30px;
@@ -79,7 +79,8 @@ function Thematrix() {
         "When a beautiful stranger leads computer hacker Neo to a forbidding underworld, he discovers the shocking truth--the life he knows is the elaborate deception of an evil cyber-intelligence.",
     },
     "The Matrix Reloaded": {
-      introduction: "Freedom fighters Neo, Trinity and Morpheus continue to lead the revolt against the Machine Army, unleashing their arsenal of extraordinary skills and weaponry against the systematic forces of repression and exploitation.",
+      introduction:
+        "Freedom fighters Neo, Trinity and Morpheus continue to lead the revolt against the Machine Army, unleashing their arsenal of extraordinary skills and weaponry against the systematic forces of repression and exploitation.",
     },
     "The Matrix Revolutions": {
       introduction:
@@ -106,16 +107,19 @@ function Thematrix() {
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
           <Dropdown.Item name="The Matrix" onClick={onClickEpisode}>
-          The Matrix
+            The Matrix
           </Dropdown.Item>
           <Dropdown.Item name="The Matrix Reloaded" onClick={onClickEpisode}>
-          The Matrix Reloaded
+            The Matrix Reloaded
           </Dropdown.Item>
           <Dropdown.Item name="The Matrix Revolutions" onClick={onClickEpisode}>
-          The Matrix Revolutions
+            The Matrix Revolutions
           </Dropdown.Item>
-          <Dropdown.Item name="The Matrix Resurrections" onClick={onClickEpisode}>
-          The Matrix Resurrections
+          <Dropdown.Item
+            name="The Matrix Resurrections"
+            onClick={onClickEpisode}
+          >
+            The Matrix Resurrections
           </Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>

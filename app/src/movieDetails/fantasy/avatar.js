@@ -14,7 +14,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import "../index.css"; //
 
 const Wrapper = styled.div`
-  height: 100%;
+  height: 100vh;
   background-color: #001f3f;
   color: white;
   padding-bottom: 30px;
@@ -79,8 +79,8 @@ function Avatar() {
         "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
     },
     "AVATAR THE WAY OF WATER": {
-      introduction: 
-      "Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Na'vi race to protect their home.",
+      introduction:
+        "Jake Sully lives with his newfound family formed on the extrasolar moon Pandora. Once a familiar threat returns to finish what was previously started, Jake must work with Neytiri and the army of the Na'vi race to protect their home.",
     },
   });
   const onClickEpisode = (e) => {
@@ -99,10 +99,13 @@ function Avatar() {
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
           <Dropdown.Item name="AVATAR" onClick={onClickEpisode}>
-          AVATAR
+            AVATAR
           </Dropdown.Item>
-          <Dropdown.Item name="AVATAR THE WAY OF WATER" onClick={onClickEpisode}>
-          AVATAR THE WAY OF WATER
+          <Dropdown.Item
+            name="AVATAR THE WAY OF WATER"
+            onClick={onClickEpisode}
+          >
+            AVATAR THE WAY OF WATER
           </Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>

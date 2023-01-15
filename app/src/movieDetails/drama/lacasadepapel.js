@@ -14,7 +14,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import "../index.css"; //
 
 const Wrapper = styled.div`
-  height: 100%;
+  height: 100vh;
   background-color: #001f3f;
   color: white;
   padding-bottom: 30px;
@@ -79,21 +79,21 @@ function Lacasadepapel() {
         "The Professor recruits a young female robber and seven other criminals for a grand heist, targeting the Royal Mint of Spain.",
     },
     "part II": {
-      introduction: "The police finds the house where The Professor has planned everything. Tokyo and Berlin are fighting about how to proceed.",
-   
+      introduction:
+        "The police finds the house where The Professor has planned everything. Tokyo and Berlin are fighting about how to proceed.",
     },
     "part III": {
-        introduction: "When Rio is captured, a distraught Tokyo turns to the Professor for help. Armed with a bold new plan, they reunite the team in order to rescue him.",
-     
-      },
-      "part IV": {
-        introduction: "Anger and grief heighten tensions between the group. The Professor, while in mourning, attempts to make a daring and dangerous escape.",
-     
-      },
-      "part V": {
-        introduction: "The Professor faces off with Sierra as Tamayo raises the stakes of the negotiations by calling the army. In the past, Berlin meets with a family member.",
-     
-      },
+      introduction:
+        "When Rio is captured, a distraught Tokyo turns to the Professor for help. Armed with a bold new plan, they reunite the team in order to rescue him.",
+    },
+    "part IV": {
+      introduction:
+        "Anger and grief heighten tensions between the group. The Professor, while in mourning, attempts to make a daring and dangerous escape.",
+    },
+    "part V": {
+      introduction:
+        "The Professor faces off with Sierra as Tamayo raises the stakes of the negotiations by calling the army. In the past, Berlin meets with a family member.",
+    },
   });
   const onClickEpisode = (e) => {
     const { name } = e.target;

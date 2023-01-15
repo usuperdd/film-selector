@@ -14,7 +14,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import "../index.css"; //
 
 const Wrapper = styled.div`
-  height: 100%;
+  height: 100vh;
   background-color: #001f3f;
   color: white;
   padding-bottom: 30px;
@@ -74,19 +74,19 @@ function Annabelle() {
   const [episode, setEpisode] = useState("Annabelle");
 
   const [episodeData, setEpisodeData] = useState({
-    "Annabelle": {
+    Annabelle: {
       introduction:
-      "A couple begins to experience terrifying supernatural occurrences involving a vintage doll shortly after their home is invaded by satanic cultists.",
+        "A couple begins to experience terrifying supernatural occurrences involving a vintage doll shortly after their home is invaded by satanic cultists.",
     },
     "Annabelle: Creation": {
       introduction:
-      "Twelve years after the tragic death of their little girl, a doll-maker and his wife welcome a nun and several girls from a shuttered orphanage into their home, where they become the target of the doll-maker's possessed creation, Annabelle.",
+        "Twelve years after the tragic death of their little girl, a doll-maker and his wife welcome a nun and several girls from a shuttered orphanage into their home, where they become the target of the doll-maker's possessed creation, Annabelle.",
     },
     "Annabelle Comes Home": {
       introduction:
-      "While babysitting the daughter of Ed and Lorraine Warren, a teenager and her friend unknowingly awaken an evil spirit trapped in a doll.",
-    }
-    });
+        "While babysitting the daughter of Ed and Lorraine Warren, a teenager and her friend unknowingly awaken an evil spirit trapped in a doll.",
+    },
+  });
   const onClickEpisode = (e) => {
     const { name } = e.target;
 
@@ -103,13 +103,13 @@ function Annabelle() {
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
           <Dropdown.Item name="Annabelle" onClick={onClickEpisode}>
-           Annabelle
+            Annabelle
           </Dropdown.Item>
           <Dropdown.Item name="Annabelle: Creation" onClick={onClickEpisode}>
-           Annabelle: Creation 
+            Annabelle: Creation
           </Dropdown.Item>
           <Dropdown.Item name="Annabelle Comes Home" onClick={onClickEpisode}>
-           Annabelle Comes Home
+            Annabelle Comes Home
           </Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>
