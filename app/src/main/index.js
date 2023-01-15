@@ -22,6 +22,8 @@ import AvatarImg from "../images/avatar.jpeg";
 import FantasticbeastsImg from "../images/fantasticbeasts.jpeg";
 import ThelordoftheringsImg from "../images/thelordoftherings.jpeg";
 import HomealoneImg from "../images/homealone.jpeg";
+import HarrypotterImg from "../images/harrypotter.jpeg";
+import CharlieImg from "../images/charlie.jpeg";
 
 import { useNavigate } from "react-router-dom";
 
@@ -206,6 +208,10 @@ function Main() {
       image: `${ThelordoftheringsImg}`,
       link: "/movie/fantasy/thelordoftherings",
     },
+    {
+      image: `${HarrypotterImg}`,
+      link: "/movie/fantasy/harrypoter",
+    },
   ];
 
   const COMEDY = [
@@ -213,6 +219,10 @@ function Main() {
     {
       image: `${HomealoneImg}`,
       link: "/movie/comedy/homealone",
+    },
+    {
+      image: `${CharlieImg}`,
+      link: "/movie/comedy/charlieandthechocolatefactory",
     },
   ];
 
