@@ -14,7 +14,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import "../index.css"; //
 
 const Wrapper = styled.div`
-  height: 100%;
+  height: 100vh;
   background-color: #001f3f;
   color: white;
   padding-bottom: 30px;
@@ -74,15 +74,15 @@ function It() {
   const [episode, setEpisode] = useState("It");
 
   const [episodeData, setEpisodeData] = useState({
-    "It": {
+    It: {
       introduction:
-      "In the summer of 1989, a group of bullied kids band together to destroy a shape-shifting monster, which disguises itself as a clown and preys on the children of Derry, their small Maine town.",
+        "In the summer of 1989, a group of bullied kids band together to destroy a shape-shifting monster, which disguises itself as a clown and preys on the children of Derry, their small Maine town.",
     },
     "It Chapter Two": {
       introduction:
-      "Twenty-seven years after their first encounter with the terrifying Pennywise, the Losers Club have grown up and moved away, until a devastating phone call brings them back.",
-    }
-    });
+        "Twenty-seven years after their first encounter with the terrifying Pennywise, the Losers Club have grown up and moved away, until a devastating phone call brings them back.",
+    },
+  });
   const onClickEpisode = (e) => {
     const { name } = e.target;
 
@@ -99,10 +99,10 @@ function It() {
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
           <Dropdown.Item name="It" onClick={onClickEpisode}>
-           It
+            It
           </Dropdown.Item>
           <Dropdown.Item name="It Chapter Two" onClick={onClickEpisode}>
-           It Chapter Two
+            It Chapter Two
           </Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>

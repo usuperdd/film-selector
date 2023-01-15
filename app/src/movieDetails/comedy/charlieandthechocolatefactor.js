@@ -14,7 +14,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import "../index.css"; //
 
 const Wrapper = styled.div`
-  height: 100%;
+  height: 100vh;
   background-color: #001f3f;
   color: white;
   padding-bottom: 30px;
@@ -94,8 +94,11 @@ function Charlieandthechocolatefactory() {
 
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
-          <Dropdown.Item name="Charlie and the chocolate factory" onClick={onClickEpisode}>
-          Charlie and the chocolate factory
+          <Dropdown.Item
+            name="Charlie and the chocolate factory"
+            onClick={onClickEpisode}
+          >
+            Charlie and the chocolate factory
           </Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>
@@ -108,4 +111,3 @@ function Charlieandthechocolatefactory() {
 }
 
 export default Charlieandthechocolatefactory;
-

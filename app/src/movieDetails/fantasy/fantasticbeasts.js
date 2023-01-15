@@ -14,7 +14,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import "../index.css"; //
 
 const Wrapper = styled.div`
-  height: 100%;
+  height: 100vh;
   background-color: #001f3f;
   color: white;
   padding-bottom: 30px;
@@ -71,7 +71,9 @@ const Introduction = styled.div`
   font-size: 18px;
 `;
 function Fantasticsbeasts() {
-  const [episode, setEpisode] = useState("Fantastic Beasts and Where to Find Them");
+  const [episode, setEpisode] = useState(
+    "Fantastic Beasts and Where to Find Them"
+  );
 
   const [episodeData, setEpisodeData] = useState({
     "Fantastic Beasts and Where to Find Them": {
@@ -79,13 +81,13 @@ function Fantasticsbeasts() {
         "The adventures of writer Newt Scamander in New York's secret community of witches and wizards seventy years before Harry Potter reads his book in school.",
     },
     "Fantastic Beasts: The Crimes of Grindelwald": {
-      introduction: 
-      "The second installment of the Fantastic Beasts series featuring the adventures of Magizoologist Newt Scamander.",
+      introduction:
+        "The second installment of the Fantastic Beasts series featuring the adventures of Magizoologist Newt Scamander.",
     },
     "Fantastic Beasts: The Secrets of Dumbledore": {
-        introduction: 
+      introduction:
         "Professor Albus Dumbledore must assist Newt Scamander and his partners as Grindelwald begins to lead an army to eliminate all Muggles.",
-      },
+    },
   });
   const onClickEpisode = (e) => {
     const { name } = e.target;
@@ -102,14 +104,23 @@ function Fantasticsbeasts() {
 
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
-          <Dropdown.Item name="Fantastic Beasts and Where to Find Them" onClick={onClickEpisode}>
-          Fantastic Beasts and Where to Find Them
+          <Dropdown.Item
+            name="Fantastic Beasts and Where to Find Them"
+            onClick={onClickEpisode}
+          >
+            Fantastic Beasts and Where to Find Them
           </Dropdown.Item>
-          <Dropdown.Item name="Fantastic Beasts: The Crimes of Grindelwald" onClick={onClickEpisode}>
-          Fantastic Beasts: The Crimes of Grindelwald
+          <Dropdown.Item
+            name="Fantastic Beasts: The Crimes of Grindelwald"
+            onClick={onClickEpisode}
+          >
+            Fantastic Beasts: The Crimes of Grindelwald
           </Dropdown.Item>
-          <Dropdown.Item name="Fantastic Beasts: The Secrets of Dumbledore" onClick={onClickEpisode}>
-          Fantastic Beasts: The Secrets of Dumbledore
+          <Dropdown.Item
+            name="Fantastic Beasts: The Secrets of Dumbledore"
+            onClick={onClickEpisode}
+          >
+            Fantastic Beasts: The Secrets of Dumbledore
           </Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>
@@ -122,4 +133,3 @@ function Fantasticsbeasts() {
 }
 
 export default Fantasticsbeasts;
-

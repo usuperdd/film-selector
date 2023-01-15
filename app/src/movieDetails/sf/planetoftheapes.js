@@ -14,7 +14,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import "../index.css"; //
 
 const Wrapper = styled.div`
-  height: 100%;
+  height: 100vh;
   background-color: #001f3f;
   color: white;
   padding-bottom: 30px;
@@ -76,25 +76,25 @@ function Planetoftheapes() {
   const [episodeData, setEpisodeData] = useState({
     "original : Planet of the Apes": {
       introduction:
-      "An astronaut crew crash-lands on a planet in the distant future where intelligent talking apes are the dominant species, and humans are the oppressed and enslaved.",
+        "An astronaut crew crash-lands on a planet in the distant future where intelligent talking apes are the dominant species, and humans are the oppressed and enslaved.",
     },
     "original : Beneath the Planet of the Apes": {
       introduction:
-      "The sole survivor of an interplanetary rescue mission searches for the only survivor of the previous expedition. He discovers a planet ruled by apes and an underground city run by telepathic humans.",
+        "The sole survivor of an interplanetary rescue mission searches for the only survivor of the previous expedition. He discovers a planet ruled by apes and an underground city run by telepathic humans.",
     },
     "original : Escape from the Planet of the Apes": {
       introduction:
-      "The sole survivor of an interplanetary rescue mission searches for the only survivor of the previous expedition. He discovers a planet ruled by apes and an underground city run by telepathic humans.",
+        "The sole survivor of an interplanetary rescue mission searches for the only survivor of the previous expedition. He discovers a planet ruled by apes and an underground city run by telepathic humans.",
     },
     "original : Conquest of the Planet of the Apes": {
       introduction:
-      "In a futuristic world that has embraced ape slavery, Caesar, the son of the late simians Cornelius and Zira, surfaces after almost twenty years of hiding out from the authorities, and prepares for a slave revolt against humanity.",
+        "In a futuristic world that has embraced ape slavery, Caesar, the son of the late simians Cornelius and Zira, surfaces after almost twenty years of hiding out from the authorities, and prepares for a slave revolt against humanity.",
     },
     "original : Battle for the Planet of the Apes": {
       introduction:
-      "Ten years after a worldwide series of ape revolutions and a brutal nuclear war among humans, Caesar must protect survivors of both species from an insidious human cult and a militant ape faction alike."
-    }
-    });
+        "Ten years after a worldwide series of ape revolutions and a brutal nuclear war among humans, Caesar must protect survivors of both species from an insidious human cult and a militant ape faction alike.",
+    },
+  });
   const onClickEpisode = (e) => {
     const { name } = e.target;
 
@@ -110,19 +110,34 @@ function Planetoftheapes() {
 
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
-          <Dropdown.Item name="original : Planet of the Apes" onClick={onClickEpisode}>
+          <Dropdown.Item
+            name="original : Planet of the Apes"
+            onClick={onClickEpisode}
+          >
             original : Planet of the Apes
           </Dropdown.Item>
-          <Dropdown.Item name="original : Beneath the Planet of the Apes" onClick={onClickEpisode}>
+          <Dropdown.Item
+            name="original : Beneath the Planet of the Apes"
+            onClick={onClickEpisode}
+          >
             original : Beneath the Planet of the Apes
           </Dropdown.Item>
-          <Dropdown.Item name="original : Escape from the Planet of the Apes" onClick={onClickEpisode}>
+          <Dropdown.Item
+            name="original : Escape from the Planet of the Apes"
+            onClick={onClickEpisode}
+          >
             original : Escape from the Planet of the Apes
           </Dropdown.Item>
-          <Dropdown.Item name="original : Conquest of the Planet of the Apes" onClick={onClickEpisode}>
+          <Dropdown.Item
+            name="original : Conquest of the Planet of the Apes"
+            onClick={onClickEpisode}
+          >
             original : Conquest of the Planet of the Apes
           </Dropdown.Item>
-          <Dropdown.Item name="original : Battle for the Planet of the Apes" onClick={onClickEpisode}>
+          <Dropdown.Item
+            name="original : Battle for the Planet of the Apes"
+            onClick={onClickEpisode}
+          >
             original : Battle for the Planet of the Apes
           </Dropdown.Item>
         </DropdownButton>

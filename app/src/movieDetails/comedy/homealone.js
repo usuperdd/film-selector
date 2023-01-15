@@ -14,7 +14,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import "../index.css"; //
 
 const Wrapper = styled.div`
-  height: 100%;
+  height: 100vh;
   background-color: #001f3f;
   color: white;
   padding-bottom: 30px;
@@ -103,13 +103,16 @@ function Homealone() {
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
           <Dropdown.Item name="Home Alone" onClick={onClickEpisode}>
-          Home Alone
+            Home Alone
           </Dropdown.Item>
-          <Dropdown.Item name="Home Alone 2: Lost in New York" onClick={onClickEpisode}>
-          Home Alone 2: Lost in New York
+          <Dropdown.Item
+            name="Home Alone 2: Lost in New York"
+            onClick={onClickEpisode}
+          >
+            Home Alone 2: Lost in New York
           </Dropdown.Item>
           <Dropdown.Item name="Home Alone 3" onClick={onClickEpisode}>
-          Home Alone 3
+            Home Alone 3
           </Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>
@@ -122,4 +125,3 @@ function Homealone() {
 }
 
 export default Homealone;
-

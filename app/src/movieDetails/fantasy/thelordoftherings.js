@@ -14,7 +14,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import "../index.css"; //
 
 const Wrapper = styled.div`
-  height: 100%;
+  height: 100vh;
   background-color: #001f3f;
   color: white;
   padding-bottom: 30px;
@@ -71,7 +71,9 @@ const Introduction = styled.div`
   font-size: 18px;
 `;
 function Thelordoftherings() {
-  const [episode, setEpisode] = useState("The Lord of the Rings: The Fellowship of the Ring");
+  const [episode, setEpisode] = useState(
+    "The Lord of the Rings: The Fellowship of the Ring"
+  );
 
   const [episodeData, setEpisodeData] = useState({
     "The Lord of the Rings: The Fellowship of the Ring": {
@@ -79,13 +81,13 @@ function Thelordoftherings() {
         "A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",
     },
     "The Lord of the Rings: The Two Towers": {
-      introduction: 
-      "While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard.",
+      introduction:
+        "While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum, the divided fellowship makes a stand against Sauron's new ally, Saruman, and his hordes of Isengard.",
     },
     "The Lord of the Rings: The Return of the King": {
-        introduction: 
+      introduction:
         "Gandalf and Aragorn lead the World of Men against Sauron's army to draw his gaze from Frodo and Sam as they approach Mount Doom with the One Ring.",
-      },
+    },
   });
   const onClickEpisode = (e) => {
     const { name } = e.target;
@@ -102,14 +104,23 @@ function Thelordoftherings() {
 
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
-          <Dropdown.Item name="The Lord of the Rings: The Fellowship of the Ring" onClick={onClickEpisode}>
-          The Lord of the Rings: The Fellowship of the Ring
+          <Dropdown.Item
+            name="The Lord of the Rings: The Fellowship of the Ring"
+            onClick={onClickEpisode}
+          >
+            The Lord of the Rings: The Fellowship of the Ring
           </Dropdown.Item>
-          <Dropdown.Item name="The Lord of the Rings: The Two Towers" onClick={onClickEpisode}>
-          The Lord of the Rings: The Two Towers
+          <Dropdown.Item
+            name="The Lord of the Rings: The Two Towers"
+            onClick={onClickEpisode}
+          >
+            The Lord of the Rings: The Two Towers
           </Dropdown.Item>
-          <Dropdown.Item name="The Lord of the Rings: The Return of the King" onClick={onClickEpisode}>
-          The Lord of the Rings: The Return of the King
+          <Dropdown.Item
+            name="The Lord of the Rings: The Return of the King"
+            onClick={onClickEpisode}
+          >
+            The Lord of the Rings: The Return of the King
           </Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>
@@ -122,4 +133,3 @@ function Thelordoftherings() {
 }
 
 export default Thelordoftherings;
-
