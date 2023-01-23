@@ -91,7 +91,7 @@ function Coachcarter() {
         <MainImage src={CoachcarterImg} />
       </BodyContainer>
       <ScenarioContainer></ScenarioContainer>
-
+          
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
           <Dropdown.Item name="Coach Carter" onClick={onClickEpisode}>

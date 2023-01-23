@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import FooterImg from "../../images/footer.jpeg";
 import RoundedsquareImg from "../../images/roundedsquare.png";
-import PerfectgameImg from "../../images/perfectgame.jpeg";
+import LittlewomenImg from "../../images/littlewomen.jpeg";
 import TriangleImg from "../../images/triangle.png";
 import PrevImg from "../../images/back.jpeg";
 import Dropdown from "react-bootstrap/Dropdown";
@@ -70,13 +70,13 @@ const IntroductionWrapper = styled.div`
 const Introduction = styled.div`
   font-size: 18px;
 `;
-function Perfectgame() {
-  const [episode, setEpisode] = useState("Perfrct Game");
+function Littlewomen() {
+  const [episode, setEpisode] = useState("Little Women");
 
   const [episodeData, setEpisodeData] = useState({
-    "Perfrct Game": {
+    "Little Women": {
       introduction:
-        "The Lotte Giants' Choi Dong-won and the Haitai Tigers' Seon Dong-ryeol are rival pitchers in 1980s baseball. The film reenacts the legendary match of May 16, 1987, which baseball fans today still recall as 'the perfect match,' when Choi and Sun compete as pitchers for the last time.",
+        "Jo March reflects back and forth on her life, telling the beloved story of the March sisters - four young women, each determined to live life on her own terms.",
     },
   });
   const onClickEpisode = (e) => {
@@ -88,14 +88,14 @@ function Perfectgame() {
     <Wrapper>
       <Header></Header>
       <BodyContainer>
-        <MainImage src={PerfectgameImg} />
+        <MainImage src={LittlewomenImg} />
       </BodyContainer>
       <ScenarioContainer></ScenarioContainer>
-
+          
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
-          <Dropdown.Item name="Perfrct Game" onClick={onClickEpisode}>
-          Perfrct Game
+          <Dropdown.Item name="Little Women" onClick={onClickEpisode}>
+          Little Women
           </Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>
@@ -107,4 +107,4 @@ function Perfectgame() {
   );
 }
 
-export default Perfectgame;
+export default Littlewomen;

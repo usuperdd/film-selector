@@ -34,6 +34,13 @@ import Coachcarter from "./movieDetails/sports/coachcarter";
 import Perfectgame from "./movieDetails/sports/perfectgame";
 import Fordvferrari from "./movieDetails/sports/fordvferrari";
 import Topgun from "./movieDetails/action/topgun";
+import Fastandfurious from "./movieDetails/action/fastandfurious";
+import Missionimpossible from "./movieDetails/action/missionimpossible";
+import Abouttime from "./movieDetails/romance/abouttime";
+import Lalaland from "./movieDetails/romance/lalaland";
+import Littlewomen from "./movieDetails/romance/littlewomen";
+
+
 
 function App() {
   return (
@@ -84,6 +91,12 @@ function App() {
       <Route exact path="/movie/sports/perfectgame" element={<Perfectgame />} />
       <Route exact path="/movie/sports/fordvferrari" element={<Fordvferrari />} />
       <Route exact path="/movie/action/topgun" element={<Topgun />} />
+      <Route exact path="/movie/action/fastandfurious" element={<Fastandfurious />} />
+      <Route exact path="/movie/action/missionimpossible" element={<Missionimpossible />} />
+      <Route exact path="/movie/romance/abouttime" element={<Abouttime />} />
+      <Route exact path="/movie/romance/lalaland" element={<Lalaland />} />
+      <Route exact path="/movie/romance/littlewomens" element={<Littlewomen />} />
+      
     </Routes>
   );
 }
