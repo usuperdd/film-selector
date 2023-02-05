@@ -15,7 +15,8 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Wrapper = styled.div`
-  /* height: 100vh;   */
+  display: flex;
+  flex-direction: column;
   background-color: #001f3f;
   color: white;
   padding: 20px;
@@ -59,6 +60,7 @@ const Button = styled.button`
   padding: 9px 15px;
   width: 20%;
   margin-bottom: 30px;
+  margin-left: auto;
 `;
 
 function Survey() {
@@ -178,7 +180,6 @@ function Survey() {
       </Row>
       <Button onClick={navigateToNext}>Next</Button>
     </Wrapper>
-
   );
 }
 
