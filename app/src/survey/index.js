@@ -12,6 +12,7 @@ import HorrorImg from "../images/horror.jpeg";
 import SportsImg from "../images/sports.jpeg";
 import AnimationImg from "../images/animation.jpeg";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Wrapper = styled.div`
   /* height: 100vh;   */
@@ -49,6 +50,17 @@ const Image = styled.img`
   height: 100%;
 `;
 
+const Button = styled.button`
+  border-radius: 7px;
+  background-color: #bb0000;
+  border: 0;
+  font-weight: 600;
+  color: white;
+  padding: 9px 15px;
+  width: 20%;
+  margin-bottom: 30px;
+`;
+
 function Survey() {
   const [images, setImages] = useState([]);
   const styles = {
@@ -61,6 +73,12 @@ function Survey() {
   const onClickImage = (e) => {
     const temp = [...images, e];
     setImages(temp);
+  };
+
+  const navigate = useNavigate();
+
+  const navigateToNext = () => {
+    navigate("/main");
   };
   return (
     <Wrapper>
@@ -145,7 +163,9 @@ function Survey() {
           </Box>
         </Col>
       </Row>
+      <Button onClick={navigateToNext}>Next</Button>
     </Wrapper>
+
   );
 }
 
