@@ -106,7 +106,7 @@ function Survey() {
             onClick={() => onClickImage("ACTION")}
             style={{
               opacity: images.find((image) => {
-                return image.isClicked == true;
+                return image.image == "ACTION" && image.isClicked == true;
               })
                 ? 0.2
                 : 1,
@@ -118,13 +118,13 @@ function Survey() {
             </ImageContainer>
           </Box>
         </Col>
-        
+
         <Col className="col-3">
-        <Box
+          <Box
             onClick={() => onClickImage("DRAMA")}
             style={{
               opacity: images.find((image) => {
-                return image.isClicked == true;
+                return image.image == "DRAMA" && image.isClicked == true;
               })
                 ? 0.2
                 : 1,
@@ -137,11 +137,11 @@ function Survey() {
           </Box>
         </Col>
         <Col className="col-3">
-        <Box
+          <Box
             onClick={() => onClickImage("FANTASY")}
             style={{
               opacity: images.find((image) => {
-                return image.isClicked == true;
+                return image.image == "FANTASY" && image.isClicked == true;
               })
                 ? 0.2
                 : 1,
@@ -157,11 +157,11 @@ function Survey() {
 
       <Row style={styles.row} className="row justify-content-evenly">
         <Col className="col-3">
-        <Box
+          <Box
             onClick={() => onClickImage("SF")}
             style={{
               opacity: images.find((image) => {
-                return image.isClicked == true;
+                return image.iamge == "SF" && image.isClicked == true;
               })
                 ? 0.2
                 : 1,
@@ -174,11 +174,11 @@ function Survey() {
           </Box>
         </Col>
         <Col className="col-3">
-        <Box
+          <Box
             onClick={() => onClickImage("COMEDY")}
             style={{
               opacity: images.find((image) => {
-                return image.isClicked == true;
+                return image.iamge == "COMEDY" && image.isClicked == true;
               })
                 ? 0.2
                 : 1,
@@ -191,11 +191,11 @@ function Survey() {
           </Box>
         </Col>
         <Col className="col-3">
-        <Box
+          <Box
             onClick={() => onClickImage("ROMANCE")}
             style={{
               opacity: images.find((image) => {
-                return image.isClicked == true;
+                return image.iamge == "ROMANCE" && image.isClicked == true;
               })
                 ? 0.2
                 : 1,
@@ -211,11 +211,11 @@ function Survey() {
 
       <Row style={styles.row} className="row justify-content-evenly">
         <Col className="col-3">
-        <Box
+          <Box
             onClick={() => onClickImage("HORROR")}
             style={{
               opacity: images.find((image) => {
-                return image.isClicked == true;
+                return image.iamge == "HORROR" && image.isClicked == true;
               })
                 ? 0.2
                 : 1,
@@ -228,11 +228,11 @@ function Survey() {
           </Box>
         </Col>
         <Col className="col-3">
-        <Box
+          <Box
             onClick={() => onClickImage("SPORTS")}
             style={{
               opacity: images.find((image) => {
-                return image.isClicked == true;
+                return image.iamge == "SPORTS" && image.isClicked == true;
               })
                 ? 0.2
                 : 1,
@@ -245,11 +245,11 @@ function Survey() {
           </Box>
         </Col>
         <Col className="col-3">
-        <Box
+          <Box
             onClick={() => onClickImage("ANIMATION")}
             style={{
               opacity: images.find((image) => {
-                return image.isClicked == true;
+                return image.iamge == "ANIMATION" && image.isClicked == true;
               })
                 ? 0.2
                 : 1,
