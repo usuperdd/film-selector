@@ -113,9 +113,15 @@ function Login() {
   const { id, password } = user;
   const navigate = useNavigate();
 
+  const navigateToLogin = () => {
+    navigate("/survey");
+  };
   const navigateToSignUp = () => {
     navigate("/signup");
   };
+
+  
+
   return (
     <Wrapper>
       <Row noGutter>
@@ -137,8 +143,10 @@ function Login() {
                   <UsernameImage src={PasswordImg}></UsernameImage>
                 </InputContainer>
 
-                <Button>Login</Button>
+               
 
+               
+                <Button onClick={navigateToLogin}>Login</Button>
                 <Button onClick={navigateToSignUp}>Sign Up</Button>
                 <ParagraphContainer>
                   <Paragraph>Forgot username?</Paragraph>
