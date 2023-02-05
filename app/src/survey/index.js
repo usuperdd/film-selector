@@ -11,7 +11,7 @@ import ComedyImg from "../images/comedy.jpeg";
 import HorrorImg from "../images/horror.jpeg";
 import SportsImg from "../images/sports.jpeg";
 import AnimationImg from "../images/animation.jpeg";
-
+import { useState } from "react";
 
 const Wrapper = styled.div`
   /* height: 100vh;   */
@@ -50,18 +50,24 @@ const Image = styled.img`
 `;
 
 function Survey() {
+  const [images, setImages] = useState([]);
   const styles = {
     row: {
       marginBottom: 40,
       //   marginLeft: 20,
     },
   };
+
+  const onClickImage = (e) => {
+    const temp = [...images, e];
+    setImages(temp);
+  };
   return (
     <Wrapper>
       <Heading>Please select your preferred genre</Heading>
       <Row style={styles.row} className="row justify-content-evenly">
         <Col className="col-3">
-          <Box>
+          <Box onClick={() => onClickImage("ACTION")}>
             <Title>Action</Title>
             <ImageContainer>
               <Image src={ActionImg} />
@@ -85,7 +91,7 @@ function Survey() {
           </Box>
         </Col>
       </Row>
-      
+
       <Row style={styles.row} className="row justify-content-evenly">
         <Col className="col-3">
           <Box>
