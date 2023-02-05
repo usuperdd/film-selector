@@ -35,6 +35,10 @@ const Box = styled.div`
   flex-direction: column;
   flex: 1;
   max-width: 280px;
+
+  &.active {
+    opacity: 0.5;
+  }
 `;
 
 const Title = styled.div`
@@ -64,6 +68,7 @@ const Button = styled.button`
 `;
 
 function Survey() {
+  const [isActive, setIsActive] = useState(false);
   const [images, setImages] = useState([]);
   const styles = {
     row: {
@@ -73,6 +78,7 @@ function Survey() {
   };
 
   const onClickImage = (e) => {
+    setIsActive(true);
     if (images.length == 0) {
       setImages([{ image: e, isClicked: true }]);
     } else {
@@ -95,12 +101,22 @@ function Survey() {
   const navigateToNext = () => {
     navigate("/main");
   };
+
   return (
     <Wrapper>
       <Heading>Please select your preferred genre</Heading>
       <Row style={styles.row} className="row justify-content-evenly">
         <Col className="col-3">
-          <Box onClick={() => onClickImage("ACTION")}>
+          <Box
+            onClick={() => onClickImage("ACTION")}
+            style={{
+              opacity: images.find((image) => {
+                return image.isClicked === true;
+              })
+                ? 0.2
+                : 1,
+            }}
+          >
             <Title>Action</Title>
             <ImageContainer>
               <Image src={ActionImg} />
