@@ -59,8 +59,21 @@ function Survey() {
   };
 
   const onClickImage = (e) => {
-    const temp = [...images, e];
-    setImages(temp);
+    if (images.length == 0) {
+      setImages([{ image: e, isClicked: true }]);
+    } else {
+      let isNew = true;
+      images.forEach((element) => {
+        if (element.image == e) {
+          element.isClicked = !element.isClicked;
+          isNew = false;
+        }
+      });
+      if (isNew) {
+        setImages([...images, { image: e, isClicked: true }]);
+      }
+    }
+    console.log(images);
   };
   return (
     <Wrapper>
