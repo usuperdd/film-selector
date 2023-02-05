@@ -68,7 +68,6 @@ const Button = styled.button`
 `;
 
 function Survey() {
-  const [isActive, setIsActive] = useState(false);
   const [images, setImages] = useState([]);
   const styles = {
     row: {
@@ -78,7 +77,6 @@ function Survey() {
   };
 
   const onClickImage = (e) => {
-    setIsActive(true);
     if (images.length == 0) {
       setImages([{ image: e, isClicked: true }]);
     } else {
@@ -86,14 +84,15 @@ function Survey() {
       images.forEach((element) => {
         if (element.image == e) {
           element.isClicked = !element.isClicked;
+          console.log(element);
           isNew = false;
+          setImages([...images]);
         }
       });
       if (isNew) {
         setImages([...images, { image: e, isClicked: true }]);
       }
     }
-    console.log(images);
   };
 
   const navigate = useNavigate();
@@ -111,7 +110,7 @@ function Survey() {
             onClick={() => onClickImage("ACTION")}
             style={{
               opacity: images.find((image) => {
-                return image.isClicked === true;
+                return image.isClicked == true;
               })
                 ? 0.2
                 : 1,
