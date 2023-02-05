@@ -118,8 +118,18 @@ function Survey() {
             </ImageContainer>
           </Box>
         </Col>
+        
         <Col className="col-3">
-          <Box onClick={() => onClickImage("DRAMA")}>
+        <Box
+            onClick={() => onClickImage("DRAMA")}
+            style={{
+              opacity: images.find((image) => {
+                return image.isClicked == true;
+              })
+                ? 0.2
+                : 1,
+            }}
+          >
             <Title>Drama</Title>
             <ImageContainer>
               <Image src={DramaImg} />
@@ -127,7 +137,16 @@ function Survey() {
           </Box>
         </Col>
         <Col className="col-3">
-          <Box onClick={() => onClickImage("FANTASY")}>
+        <Box
+            onClick={() => onClickImage("FANTASY")}
+            style={{
+              opacity: images.find((image) => {
+                return image.isClicked == true;
+              })
+                ? 0.2
+                : 1,
+            }}
+          >
             <Title>Fantasy</Title>
             <ImageContainer>
               <Image src={FantasyImg} />
@@ -138,7 +157,16 @@ function Survey() {
 
       <Row style={styles.row} className="row justify-content-evenly">
         <Col className="col-3">
-          <Box onClick={() => onClickImage("SF")}>
+        <Box
+            onClick={() => onClickImage("SF")}
+            style={{
+              opacity: images.find((image) => {
+                return image.isClicked == true;
+              })
+                ? 0.2
+                : 1,
+            }}
+          >
             <Title>SF</Title>
             <ImageContainer>
               <Image src={SFImg} />
@@ -146,7 +174,16 @@ function Survey() {
           </Box>
         </Col>
         <Col className="col-3">
-          <Box onClick={() => onClickImage("COMEDY")}>
+        <Box
+            onClick={() => onClickImage("COMEDY")}
+            style={{
+              opacity: images.find((image) => {
+                return image.isClicked == true;
+              })
+                ? 0.2
+                : 1,
+            }}
+          >
             <Title>Comedy</Title>
             <ImageContainer>
               <Image src={ComedyImg} />
@@ -154,7 +191,16 @@ function Survey() {
           </Box>
         </Col>
         <Col className="col-3">
-          <Box onClick={() => onClickImage("ROMANCE")}>
+        <Box
+            onClick={() => onClickImage("ROMANCE")}
+            style={{
+              opacity: images.find((image) => {
+                return image.isClicked == true;
+              })
+                ? 0.2
+                : 1,
+            }}
+          >
             <Title>Romance</Title>
             <ImageContainer>
               <Image src={RomanceImg} />
@@ -165,7 +211,16 @@ function Survey() {
 
       <Row style={styles.row} className="row justify-content-evenly">
         <Col className="col-3">
-          <Box onClick={() => onClickImage("HORROR")}>
+        <Box
+            onClick={() => onClickImage("HORROR")}
+            style={{
+              opacity: images.find((image) => {
+                return image.isClicked == true;
+              })
+                ? 0.2
+                : 1,
+            }}
+          >
             <Title>Horror</Title>
             <ImageContainer>
               <Image src={HorrorImg} />
@@ -173,7 +228,16 @@ function Survey() {
           </Box>
         </Col>
         <Col className="col-3">
-          <Box onClick={() => onClickImage("SPORTS")}>
+        <Box
+            onClick={() => onClickImage("SPORTS")}
+            style={{
+              opacity: images.find((image) => {
+                return image.isClicked == true;
+              })
+                ? 0.2
+                : 1,
+            }}
+          >
             <Title>Sports</Title>
             <ImageContainer>
               <Image src={SportsImg} />
@@ -181,7 +245,16 @@ function Survey() {
           </Box>
         </Col>
         <Col className="col-3">
-          <Box onClick={() => onClickImage("ANIMATION")}>
+        <Box
+            onClick={() => onClickImage("ANIMATION")}
+            style={{
+              opacity: images.find((image) => {
+                return image.isClicked == true;
+              })
+                ? 0.2
+                : 1,
+            }}
+          >
             <Title>Animation</Title>
             <ImageContainer>
               <Image src={AnimationImg} />
