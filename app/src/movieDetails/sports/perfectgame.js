@@ -25,8 +25,8 @@ const Header = styled.div`
   width: 100%;
   background-image: url(${FooterImg});
   display: flex;
-  align-items: center;
-  padding: 10px;
+  align-items: center;                                    
+  padding: 10px;                     
   padding-right: 50px;
 `;
 
