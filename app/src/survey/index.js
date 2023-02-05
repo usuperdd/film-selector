@@ -123,7 +123,7 @@ function Survey() {
           </Box>
         </Col>
         <Col className="col-3">
-          <Box>
+          <Box onClick={() => onClickImage("DRAMA")}>
             <Title>Drama</Title>
             <ImageContainer>
               <Image src={DramaImg} />
@@ -131,7 +131,7 @@ function Survey() {
           </Box>
         </Col>
         <Col className="col-3">
-          <Box>
+          <Box onClick={() => onClickImage("FANTASY")}>
             <Title>Fantasy</Title>
             <ImageContainer>
               <Image src={FantasyImg} />
@@ -142,7 +142,7 @@ function Survey() {
 
       <Row style={styles.row} className="row justify-content-evenly">
         <Col className="col-3">
-          <Box>
+          <Box onClick={() => onClickImage("SF")}>
             <Title>SF</Title>
             <ImageContainer>
               <Image src={SFImg} />
@@ -150,7 +150,7 @@ function Survey() {
           </Box>
         </Col>
         <Col className="col-3">
-          <Box>
+          <Box onClick={() => onClickImage("COMEDY")}>
             <Title>Comedy</Title>
             <ImageContainer>
               <Image src={ComedyImg} />
@@ -158,7 +158,7 @@ function Survey() {
           </Box>
         </Col>
         <Col className="col-3">
-          <Box>
+          <Box onClick={() => onClickImage("ROMANCE")}>
             <Title>Romance</Title>
             <ImageContainer>
               <Image src={RomanceImg} />
@@ -169,7 +169,7 @@ function Survey() {
 
       <Row style={styles.row} className="row justify-content-evenly">
         <Col className="col-3">
-          <Box>
+          <Box onClick={() => onClickImage("HORROR")}>
             <Title>Horror</Title>
             <ImageContainer>
               <Image src={HorrorImg} />
@@ -177,7 +177,7 @@ function Survey() {
           </Box>
         </Col>
         <Col className="col-3">
-          <Box>
+          <Box onClick={() => onClickImage("SPORTS")}>
             <Title>Sports</Title>
             <ImageContainer>
               <Image src={SportsImg} />
@@ -185,7 +185,7 @@ function Survey() {
           </Box>
         </Col>
         <Col className="col-3">
-          <Box>
+          <Box onClick={() => onClickImage("ANIMATION")}>
             <Title>Animation</Title>
             <ImageContainer>
               <Image src={AnimationImg} />
