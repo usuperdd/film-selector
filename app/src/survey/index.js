@@ -35,10 +35,6 @@ const Box = styled.div`
   flex-direction: column;
   flex: 1;
   max-width: 280px;
-
-  &.active {
-    opacity: 0.5;
-  }
 `;
 
 const Title = styled.div`
