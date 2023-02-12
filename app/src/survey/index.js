@@ -73,6 +73,7 @@ function Survey() {
   };
 
   const onClickImage = (e) => {
+    console.log(e);
     if (images.length == 0) {
       setImages([{ image: e, isClicked: true }]);
     } else {
@@ -87,6 +88,7 @@ function Survey() {
       });
       if (isNew) {
         setImages([...images, { image: e, isClicked: true }]);
+        console.log(images);
       }
     }
   };
@@ -94,7 +96,7 @@ function Survey() {
   const navigate = useNavigate();
 
   const navigateToNext = () => {
-    navigate("/main");
+    navigate("/main", { state: images });
   };
 
   return (
@@ -161,7 +163,7 @@ function Survey() {
             onClick={() => onClickImage("SF")}
             style={{
               opacity: images.find((image) => {
-                return image.iamge == "SF" && image.isClicked == true;
+                return image.image == "SF" && image.isClicked == true;
               })
                 ? 0.2
                 : 1,
@@ -178,7 +180,7 @@ function Survey() {
             onClick={() => onClickImage("COMEDY")}
             style={{
               opacity: images.find((image) => {
-                return image.iamge == "COMEDY" && image.isClicked == true;
+                return image.image == "COMEDY" && image.isClicked == true;
               })
                 ? 0.2
                 : 1,
@@ -195,7 +197,7 @@ function Survey() {
             onClick={() => onClickImage("ROMANCE")}
             style={{
               opacity: images.find((image) => {
-                return image.iamge == "ROMANCE" && image.isClicked == true;
+                return image.image == "ROMANCE" && image.isClicked == true;
               })
                 ? 0.2
                 : 1,
@@ -215,7 +217,7 @@ function Survey() {
             onClick={() => onClickImage("HORROR")}
             style={{
               opacity: images.find((image) => {
-                return image.iamge == "HORROR" && image.isClicked == true;
+                return image.image == "HORROR" && image.isClicked == true;
               })
                 ? 0.2
                 : 1,
@@ -232,7 +234,7 @@ function Survey() {
             onClick={() => onClickImage("SPORTS")}
             style={{
               opacity: images.find((image) => {
-                return image.iamge == "SPORTS" && image.isClicked == true;
+                return image.image == "SPORTS" && image.isClicked == true;
               })
                 ? 0.2
                 : 1,
@@ -249,7 +251,7 @@ function Survey() {
             onClick={() => onClickImage("ANIMATION")}
             style={{
               opacity: images.find((image) => {
-                return image.iamge == "ANIMATION" && image.isClicked == true;
+                return image.image == "ANIMATION" && image.isClicked == true;
               })
                 ? 0.2
                 : 1,
