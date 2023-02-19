@@ -85,6 +85,7 @@ margin-bottom: 40px;
 `;
 
 function Post() {
+  
    
     return (
       <Wrapper>
