@@ -7,6 +7,8 @@ import './Paging.css';
 
 import FooterImg from "../images/footer.jpeg";
 import ProfileImg from "../images/profile.png";
+import { useNavigate } from "react-router-dom";
+
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -103,6 +105,11 @@ function Community() {
   const [page, setPage] = useState(1); 
   const handlePageChange = (page) => { setPage(page); };
 
+  const navigate = useNavigate();
+
+  const navigateToWriting = () => {
+    navigate("/post");
+  };
 
   return (
     <Wrapper>
@@ -113,7 +120,7 @@ function Community() {
       </Header>
 
       <Body>
-        <WritingButton>Writing</WritingButton>
+        <WritingButton onClick={navigateToWriting}>Next</WritingButton>
         <CategoryContainer>
             <CategoryButton>All</CategoryButton>
             <CategoryButton>Normal</CategoryButton>
