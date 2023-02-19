@@ -14,7 +14,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import "../index.css"; //
 
 const Wrapper = styled.div`
-  height: 100vh;
+  height: 100%;
   background-color: #001f3f;
   color: white;
   padding-bottom: 30px;
@@ -71,18 +71,13 @@ const Introduction = styled.div`
   font-size: 18px;
 `;
 function Missionimpossible() {
-  const [episode, setEpisode] = useState(
-    "Mission: Impossible"
-  );
+  const [episode, setEpisode] = useState("Mission: Impossible");
 
   const [episodeData, setEpisodeData] = useState({
     "Mission: Impossible": {
       introduction:
         "An American agent, under false suspicion of disloyalty, must discover and expose the real spy without the help of his organization.",
     },
-   
-    
-    
   });
   const onClickEpisode = (e) => {
     const { name } = e.target;
@@ -99,13 +94,9 @@ function Missionimpossible() {
 
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
-          <Dropdown.Item
-            name="Mission: Impossible"
-            onClick={onClickEpisode}
-        >
-           Mission: Impossible
+          <Dropdown.Item name="Mission: Impossible" onClick={onClickEpisode}>
+            Mission: Impossible
           </Dropdown.Item>
-          
         </DropdownButton>
       </SliderWrapper>
 

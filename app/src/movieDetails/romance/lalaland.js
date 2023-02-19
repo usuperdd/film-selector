@@ -14,7 +14,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import "../index.css"; //
 
 const Wrapper = styled.div`
-  height: 100vh;
+  height: 100%;
   background-color: #001f3f;
   color: white;
   padding-bottom: 30px;
@@ -91,11 +91,11 @@ function Lalaland() {
         <MainImage src={LalalandImg} />
       </BodyContainer>
       <ScenarioContainer></ScenarioContainer>
-          
+
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
           <Dropdown.Item name="La La Land" onClick={onClickEpisode}>
-          La La Land
+            La La Land
           </Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>

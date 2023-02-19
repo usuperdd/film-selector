@@ -14,7 +14,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import "../index.css"; //
 
 const Wrapper = styled.div`
-  height: 100vh;
+  height: 100%;
   background-color: #001f3f;
   color: white;
   padding-bottom: 30px;
@@ -25,8 +25,8 @@ const Header = styled.div`
   width: 100%;
   background-image: url(${FooterImg});
   display: flex;
-  align-items: center;                                    
-  padding: 10px;                     
+  align-items: center;
+  padding: 10px;
   padding-right: 50px;
 `;
 
@@ -95,7 +95,7 @@ function Perfectgame() {
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
           <Dropdown.Item name="Perfrct Game" onClick={onClickEpisode}>
-          Perfrct Game
+            Perfrct Game
           </Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>

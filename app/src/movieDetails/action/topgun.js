@@ -14,7 +14,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import "../index.css"; //
 
 const Wrapper = styled.div`
-  height: 100vh;
+  height: 100%;
   background-color: #001f3f;
   color: white;
   padding-bottom: 30px;
@@ -69,11 +69,10 @@ const IntroductionWrapper = styled.div`
 
 const Introduction = styled.div`
   font-size: 18px;
+  color: white;
 `;
 function Topgun() {
-  const [episode, setEpisode] = useState(
-    "TOP GUN"
-  );
+  const [episode, setEpisode] = useState("TOP GUN");
 
   const [episodeData, setEpisodeData] = useState({
     "TOP GUN": {
@@ -83,11 +82,11 @@ function Topgun() {
     "TOP GUN : MAVERICK": {
       introduction:
         "After thirty years, Maverick is still pushing the envelope as a top naval aviator, but must confront ghosts of his past when he leads TOP GUN's elite graduates on a mission that demands the ultimate sacrifice from those chosen to fly it.",
-   },
+    },
   });
   const onClickEpisode = (e) => {
     const { name } = e.target;
-
+    console.log(episodeData[episode]["introduction"]);
     setEpisode(name);
   };
   return (
@@ -100,16 +99,10 @@ function Topgun() {
 
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
-          <Dropdown.Item
-            name="TOP GUN"
-            onClick={onClickEpisode}
-        >
+          <Dropdown.Item name="TOP GUN" onClick={onClickEpisode}>
             TOP GUN
           </Dropdown.Item>
-          <Dropdown.Item
-            name="TOP GUN : MAVERICK"
-            onClick={onClickEpisode}
-          >
+          <Dropdown.Item name="TOP GUN : MAVERICK" onClick={onClickEpisode}>
             TOP GUN : MAVERICK
           </Dropdown.Item>
         </DropdownButton>
