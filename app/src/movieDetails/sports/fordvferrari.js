@@ -14,7 +14,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import "../index.css"; //
 
 const Wrapper = styled.div`
-  height: 100vh;
+  height: 100%;
   background-color: #001f3f;
   color: white;
   padding-bottom: 30px;
@@ -95,7 +95,7 @@ function Fordvferrari() {
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
           <Dropdown.Item name="Ford V Ferrari" onClick={onClickEpisode}>
-          Ford V Ferrari
+            Ford V Ferrari
           </Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>

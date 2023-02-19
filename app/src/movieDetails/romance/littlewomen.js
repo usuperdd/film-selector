@@ -14,7 +14,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import "../index.css"; //
 
 const Wrapper = styled.div`
-  height: 100vh;
+  height: 100%;
   background-color: #001f3f;
   color: white;
   padding-bottom: 30px;
@@ -91,11 +91,11 @@ function Littlewomen() {
         <MainImage src={LittlewomenImg} />
       </BodyContainer>
       <ScenarioContainer></ScenarioContainer>
-          
+
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
           <Dropdown.Item name="Little Women" onClick={onClickEpisode}>
-          Little Women
+            Little Women
           </Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>

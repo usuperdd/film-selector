@@ -73,6 +73,7 @@ const BlocksWrapper = styled.div`
   display: flex;
   flex-direction: row;
   margin-bottom: 30px;
+  margin-top: 30px;
 `;
 
 const Block = styled.div`

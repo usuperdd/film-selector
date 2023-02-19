@@ -14,7 +14,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import "../index.css"; //
 
 const Wrapper = styled.div`
-  height: 100vh;
+  height: 100%;
   background-color: #001f3f;
   color: white;
   padding-bottom: 30px;
@@ -91,11 +91,11 @@ function Coachcarter() {
         <MainImage src={CoachcarterImg} />
       </BodyContainer>
       <ScenarioContainer></ScenarioContainer>
-          
+
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
           <Dropdown.Item name="Coach Carter" onClick={onClickEpisode}>
-          Coach Carter
+            Coach Carter
           </Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>
@@ -108,4 +108,3 @@ function Coachcarter() {
 }
 
 export default Coachcarter;
-

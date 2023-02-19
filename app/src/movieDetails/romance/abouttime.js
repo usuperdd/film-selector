@@ -14,7 +14,7 @@ import DropdownButton from "react-bootstrap/DropdownButton";
 import "../index.css"; //
 
 const Wrapper = styled.div`
-  height: 100vh;
+  height: 100%;
   background-color: #001f3f;
   color: white;
   padding-bottom: 30px;
@@ -91,11 +91,11 @@ function Abouttime() {
         <MainImage src={AbouttimeImg} />
       </BodyContainer>
       <ScenarioContainer></ScenarioContainer>
-          
+
       <SliderWrapper>
         <DropdownButton id="dropdown-basic-button" title={episode}>
           <Dropdown.Item name="About time" onClick={onClickEpisode}>
-          About time
+            About time
           </Dropdown.Item>
         </DropdownButton>
       </SliderWrapper>
