@@ -7,7 +7,7 @@ import Main from "./main/index";
 import Community from "./community/index";
 import Userinfo from "./userinfo/index";
 import Post from "./post/index";
-import PostDetails from "./postDetails/index";
+import Postdetails from "./postdetails/index";
 import StarWars from "./movieDetails/sf/starwars";
 import Alien from "./movieDetails/sf/alien";
 import Planetoftheapes from "./movieDetails/sf/planetoftheapes";
@@ -53,7 +53,7 @@ function App() {
       <Route exact path="/community" element={<Community />} />
       <Route exact path="/userinfo" element={<Userinfo />} />
       <Route exact path="/post" element={<Post />} />
-      <Route exact path="/details" element={<PostDetails />} />
+      <Route exact path="/details" element={<Postdetails />} />
       <Route exact path="/movie/sf/starwars" element={<StarWars />} />
       <Route exact path="/movie/sf/alien" element={<Alien />} />
       <Route

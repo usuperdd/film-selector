@@ -103,7 +103,7 @@ const DeleteButton = styled.div`
   font-weight: 600;
   margin-left: auto;
 `;
-function PostDetails() {
+function Postdetails() {
   return (
     <Wrapper>
       <Header>
@@ -144,4 +144,4 @@ function PostDetails() {
   );
 }
 
-export default PostDetails;
+export default Postdetails;

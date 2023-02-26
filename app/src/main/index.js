@@ -34,6 +34,7 @@ import TopgunImg from "../images/topgun.jpeg";
 import CoachcarterImg from "../images/coachcarter.jpeg";
 import FordvferrariImg from "../images/fordvferrari.jpeg";
 import AbouttimeImg from "../images/abouttime.jpeg";
+import CommunityImg from "../images/community.jpeg";
 
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -106,6 +107,11 @@ function Main() {
   const location = useLocation();
   const images = location.state;
 
+  const navigateToBlock = () => {
+    navigate("/community");
+  };
+  
+
   const [indexes, setIndexes] = useState({
     SF: {
       first: 0,
@@ -116,6 +122,7 @@ function Main() {
         { image: `${Alien}`, link: "/movie/sf/alien" },
         { image: `${Planet}`, link: "/movie/sf/planetoftheapes" },
         { image: `${Matrix}`, link: "/movie/sf/thematrix" },
+        { image: `${CommunityImg}`, link: "/community" },
       ],
     },
     ACTION: {
@@ -335,13 +342,17 @@ function Main() {
                   src={lst.image}
                   onClick={() => navigateToMovie(lst.link)}
                 ></PosterImg>
+                
               )}
             </Block>
+           
           );
         })}
+         <Block onClick={navigateToBlock}>Community</Block>
         <SliderButton onClick={() => nextPage(type, "next")}>
           <span>&#8594;</span>
         </SliderButton>
+        
       </>
     );
   }
