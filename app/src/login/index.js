@@ -5,6 +5,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import UsernameImg from "../images/username.png";
 import PasswordImg from "../images/password.png";
 import { useNavigate } from "react-router-dom";
+import firebaseConfigs from "../config/firebase";
+import { doc, getDoc } from "firebase/firestore/lite";
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -105,22 +107,40 @@ const Paragraph = styled.p`
   margin: 10px;
 `;
 function Login() {
+  const db = firebaseConfigs.db;
   const [user, setUser] = useState({
     id: "",
     password: "",
   });
 
-  const { id, password } = user;
   const navigate = useNavigate();
 
-  const navigateToLogin = () => {
-    navigate("/survey");
+  const onChangeInput = (e) => {
+    const { name, value } = e.target;
+    setUser({
+      ...user,
+      [name]: value,
+    });
+  };
+  const navigateToLogin = async () => {
+    const docRef = doc(db, "members", user.id);
+    const docSnap = await getDoc(docRef);
+    if (docSnap.data() != undefined) {
+      if (
+        docSnap.data().id == user.id &&
+        docSnap.data().password == user.password
+      ) {
+        navigate("/survey");
+      } else {
+        alert("Wrong id/password");
+      }
+    } else {
+      alert("Wrong id/password");
+    }
   };
   const navigateToSignUp = () => {
     navigate("/signup");
   };
-
-  
 
   return (
     <Wrapper>
@@ -135,17 +155,24 @@ function Login() {
               <BoxContainer>
                 <InputContainer>
                   <UsernameImage src={UsernameImg}></UsernameImage>
-                  <UserInput placeholder="Username" />
+                  <UserInput
+                    name="id"
+                    value={user.id}
+                    onChange={onChangeInput}
+                    placeholder="Username"
+                  />
                 </InputContainer>
 
                 <InputContainer>
-                  <UserInput2 placeholder="Password" />
+                  <UserInput2
+                    name="password"
+                    value={user.password}
+                    onChange={onChangeInput}
+                    placeholder="Password"
+                  />
                   <UsernameImage src={PasswordImg}></UsernameImage>
                 </InputContainer>
 
-               
-
-               
                 <Button onClick={navigateToLogin}>Login</Button>
                 <Button onClick={navigateToSignUp}>Sign Up</Button>
                 <ParagraphContainer>

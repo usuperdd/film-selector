@@ -6,6 +6,8 @@ import UsernameImg from "../images/username.png";
 import EmailImg from "../images/email.jpeg";
 import PasswordImg from "../images/password.png";
 import { useNavigate } from "react-router-dom";
+import firebaseConfigs from "../config/firebase";
+import { doc, setDoc } from "firebase/firestore/lite";
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -116,34 +118,70 @@ const Paragraph = styled.p`
 `;
 
 function SignUp() {
+  const db = firebaseConfigs.db;
   const navigate = useNavigate();
+
+  const [user, setUser] = useState({ id: "", email: "", password: "" });
+
+  function onChangeInput(e) {
+    const { name, value } = e.target;
+    setUser({
+      ...user,
+      [name]: value,
+    });
+    console.log(user);
+  }
   function navigateToLogin() {
     navigate("/");
   }
+
+  const createAccount = async () => {
+    await setDoc(doc(db, "members", user.id), {
+      id: user.id,
+      email: user.email,
+      password: user.password,
+    });
+  };
+
   return (
     <Wrapper>
       <Container>
         <Heading>Sign Up</Heading>
         <InputContainer>
           <UsernameImage src={UsernameImg}></UsernameImage>
-          <UserInput placeholder="Username" />
+          <UserInput
+            name="id"
+            value={user.id}
+            onChange={onChangeInput}
+            placeholder="Username"
+          />
         </InputContainer>
 
         <InputContainer>
-          <UserInput2 placeholder="Email" />
+          <UserInput2
+            placeholder="Email"
+            name="email"
+            value={user.email}
+            onChange={onChangeInput}
+          />
           <UsernameImage2 src={EmailImg}></UsernameImage2>
         </InputContainer>
 
         <InputContainer>
           <UsernameImage src={PasswordImg}></UsernameImage>
-          <UserInput placeholder="Password" />
+          <UserInput
+            name="password"
+            value={user.password}
+            onChange={onChangeInput}
+            placeholder="Password"
+          />
         </InputContainer>
         <AgreementContainer>
           <Agreement type={"checkbox"} />
           <Paragraph> I read and agree to Terms & Conditions </Paragraph>
         </AgreementContainer>
 
-        <Button>Create Account</Button>
+        <Button onClick={createAccount}>Create Account</Button>
         <ParagraphContainer>
           <Paragraph>Already have an account?</Paragraph>
           <Paragraph onClick={navigateToLogin}>Sign in</Paragraph>
