@@ -13,6 +13,8 @@ import SportsImg from "../images/sports.jpeg";
 import AnimationImg from "../images/animation.jpeg";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import firebaseConfigs from "../config/firebase";
+import { doc, setDoc } from "firebase/firestore/lite";
 
 const Wrapper = styled.div`
   display: flex;
@@ -65,6 +67,8 @@ const Button = styled.button`
 
 function Survey() {
   const [images, setImages] = useState([]);
+  const db = firebaseConfigs.db;
+  const [surveyID, setsurveyID] = useState({ action: "", animation: "", comedy: "", drama: "", fantasy: "", horror: "", romance: "", sf: "", sports: "" });
   const styles = {
     row: {
       marginBottom: 40,
@@ -92,6 +96,8 @@ function Survey() {
       }
     }
   };
+
+
 
   const navigate = useNavigate();
 
