@@ -9,7 +9,7 @@ import firebaseConfigs from "../config/firebase";
 
 import FooterImg from "../images/footer.jpeg";
 import ProfileImg from "../images/profile.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -96,7 +96,8 @@ const Heading2 = styled.div`
 
 function Community() {
   const [page, setPage] = useState(1);
-
+  const location = useLocation();
+  const userId = location.state.userId;
   const db = firebaseConfigs.db;
 
   useEffect(async () => {
@@ -111,7 +112,7 @@ function Community() {
   const navigate = useNavigate();
 
   const navigateToWriting = () => {
-    navigate("/post");
+    navigate("/post", { state: { userId: userId } });
   };
 
   return (

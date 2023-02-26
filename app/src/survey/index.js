@@ -12,7 +12,7 @@ import HorrorImg from "../images/horror.jpeg";
 import SportsImg from "../images/sports.jpeg";
 import AnimationImg from "../images/animation.jpeg";
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import firebaseConfigs from "../config/firebase";
 import { doc, setDoc } from "firebase/firestore/lite";
 
@@ -66,9 +66,12 @@ const Button = styled.button`
 `;
 
 function Survey() {
-  const [images, setImages] = useState([]);
+  const location = useLocation();
+  const userId = location.state;
+
   const db = firebaseConfigs.db;
-  const [surveyID, setsurveyID] = useState({ action: "", animation: "", comedy: "", drama: "", fantasy: "", horror: "", romance: "", sf: "", sports: "" });
+  const [images, setImages] = useState([]);
+
   const styles = {
     row: {
       marginBottom: 40,
@@ -77,7 +80,6 @@ function Survey() {
   };
 
   const onClickImage = (e) => {
-    console.log(e);
     if (images.length == 0) {
       setImages([{ image: e, isClicked: true }]);
     } else {
@@ -85,7 +87,7 @@ function Survey() {
       images.forEach((element) => {
         if (element.image == e) {
           element.isClicked = !element.isClicked;
-          console.log(element);
+
           isNew = false;
           setImages([...images]);
         }
@@ -97,12 +99,22 @@ function Survey() {
     }
   };
 
-
-
   const navigate = useNavigate();
 
-  const navigateToNext = () => {
-    navigate("/main", { state: images });
+  const navigateToNext = async () => {
+    const temp = images.filter((image) => image.isClicked == true);
+
+    temp.forEach(async (genre) => {
+      await setDoc(
+        doc(db, "surveys", userId),
+        {
+          [genre.image]: true,
+        },
+        { merge: true }
+      );
+    });
+
+    navigate("/main", { state: { images: images, userId: userId } });
   };
 
   return (

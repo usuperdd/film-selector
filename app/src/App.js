@@ -7,7 +7,7 @@ import Main from "./main/index";
 import Community from "./community/index";
 import Userinfo from "./userinfo/index";
 import Post from "./post/index";
-import Postdetails from "./postdetails/index";
+import Postdetails from "./postDetails/index";
 import StarWars from "./movieDetails/sf/starwars";
 import Alien from "./movieDetails/sf/alien";
 import Planetoftheapes from "./movieDetails/sf/planetoftheapes";
@@ -41,8 +41,6 @@ import Abouttime from "./movieDetails/romance/abouttime";
 import Lalaland from "./movieDetails/romance/lalaland";
 import Littlewomen from "./movieDetails/romance/littlewomen";
 
-
-
 function App() {
   return (
     <Routes>
@@ -73,32 +71,79 @@ function App() {
         element={<Lacasadepapel />}
       />
       <Route exact path="/movie/drama/stoveleague" element={<Stoveleague />} />
-      <Route exact path="/movie/drama/thegoldenspoon" element={<Thegoldenspoon />} />
+      <Route
+        exact
+        path="/movie/drama/thegoldenspoon"
+        element={<Thegoldenspoon />}
+      />
       <Route exact path="/movie/horror/annabelle" element={<Annabelle />} />
-      <Route exact path="/movie/horror/theconjuring" element={<Theconjuring />} />
+      <Route
+        exact
+        path="/movie/horror/theconjuring"
+        element={<Theconjuring />}
+      />
       <Route exact path="/movie/horror/thenun" element={<Thenun />} />
       <Route exact path="/movie/horror/it" element={<It />} />
       <Route exact path="/movie/drama/rebornrich" element={<Rebornrich />} />
-      <Route exact path="/movie/animation/chainsawman" element={<Chainsawman />} />
-      <Route exact path="/movie/animation/attackontitan" element={<Attackontitan />} />
+      <Route
+        exact
+        path="/movie/animation/chainsawman"
+        element={<Chainsawman />}
+      />
+      <Route
+        exact
+        path="/movie/animation/attackontitan"
+        element={<Attackontitan />}
+      />
       <Route exact path="/movie/fantasy/avatar" element={<Avatar />} />
-      <Route exact path="/movie/fantasy/harrypotter" element={<Harrypotter />} />
-      <Route exact path="/movie/fantasy/fantasticbeasts" element={<Fantasticsbeasts />} />
-      <Route exact path="/movie/fantasy/thelordoftherings" element={<Thelordoftherings />} />
+      <Route
+        exact
+        path="/movie/fantasy/harrypotter"
+        element={<Harrypotter />}
+      />
+      <Route
+        exact
+        path="/movie/fantasy/fantasticbeasts"
+        element={<Fantasticsbeasts />}
+      />
+      <Route
+        exact
+        path="/movie/fantasy/thelordoftherings"
+        element={<Thelordoftherings />}
+      />
       <Route exact path="/movie/comedy/homealone" element={<Homealone />} />
-      <Route exact path="/movie/comedy/charlieandthechocolatefactory" element={<Charlieandthechocolatefactory />} />
+      <Route
+        exact
+        path="/movie/comedy/charlieandthechocolatefactory"
+        element={<Charlieandthechocolatefactory />}
+      />
       <Route exact path="/movie/comedy/badboys" element={<Badboys />} />
       <Route exact path="/movie/comedy/parasite" element={<Parasite />} />
       <Route exact path="/movie/sports/coachcarter" element={<Coachcarter />} />
       <Route exact path="/movie/sports/perfectgame" element={<Perfectgame />} />
-      <Route exact path="/movie/sports/fordvferrari" element={<Fordvferrari />} />
+      <Route
+        exact
+        path="/movie/sports/fordvferrari"
+        element={<Fordvferrari />}
+      />
       <Route exact path="/movie/action/topgun" element={<Topgun />} />
-      <Route exact path="/movie/action/fastandfurious" element={<Fastandfurious />} />
-      <Route exact path="/movie/action/missionimpossible" element={<Missionimpossible />} />
+      <Route
+        exact
+        path="/movie/action/fastandfurious"
+        element={<Fastandfurious />}
+      />
+      <Route
+        exact
+        path="/movie/action/missionimpossible"
+        element={<Missionimpossible />}
+      />
       <Route exact path="/movie/romance/abouttime" element={<Abouttime />} />
       <Route exact path="/movie/romance/lalaland" element={<Lalaland />} />
-      <Route exact path="/movie/romance/littlewomens" element={<Littlewomen />} />
-      
+      <Route
+        exact
+        path="/movie/romance/littlewomens"
+        element={<Littlewomen />}
+      />
     </Routes>
   );
 }

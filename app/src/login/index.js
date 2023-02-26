@@ -130,7 +130,7 @@ function Login() {
         docSnap.data().id == user.id &&
         docSnap.data().password == user.password
       ) {
-        navigate("/survey");
+        navigate("/survey", { state: user.id });
       } else {
         alert("Wrong id/password");
       }

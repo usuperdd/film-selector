@@ -105,12 +105,12 @@ const SliderButton = styled.button`
 function Main() {
   const navigate = useNavigate();
   const location = useLocation();
-  const images = location.state;
+  const images = location.state.images;
+  const userId = location.state.userId;
 
   const navigateToBlock = () => {
-    navigate("/community");
+    navigate("/community", { state: { userId: userId } });
   };
-  
 
   const [indexes, setIndexes] = useState({
     SF: {
@@ -342,17 +342,14 @@ function Main() {
                   src={lst.image}
                   onClick={() => navigateToMovie(lst.link)}
                 ></PosterImg>
-                
               )}
             </Block>
-           
           );
         })}
-         <Block onClick={navigateToBlock}>Community</Block>
+        <Block onClick={navigateToBlock}>Community</Block>
         <SliderButton onClick={() => nextPage(type, "next")}>
           <span>&#8594;</span>
         </SliderButton>
-        
       </>
     );
   }
