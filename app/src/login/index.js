@@ -130,6 +130,9 @@ function Login() {
         docSnap.data().id == user.id &&
         docSnap.data().password == user.password
       ) {
+        const surveyRef = doc(db, "surveys", user.id);
+        const surveySnap = await getDoc(surveyRef);
+        // i;
         navigate("/survey", { state: user.id });
       } else {
         alert("Wrong id/password");
