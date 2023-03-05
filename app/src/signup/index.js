@@ -8,7 +8,6 @@ import PasswordImg from "../images/password.png";
 import { useNavigate } from "react-router-dom";
 import firebaseConfigs from "../config/firebase";
 import { doc, setDoc } from "firebase/firestore/lite";
-import { user } from "firebase/firestore/lite";
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -110,10 +109,26 @@ const Button = styled.button`
   /* margin-bottom: 30px; */
 `;
 
+const Button2 = styled.button`
+  border-radius: 7px;
+  background-color: white;
+  border: 0;
+  font-weight: 600;
+  color: #7c4dff;
+  padding: 9px 15px;
+  width: 40%;
+  max-width: 360px;
+  margin-top: 20px;
+  /* margin-bottom: 30px; */
+`;
+
+
+
 const ParagraphContainer = styled.div`
   display: flex;
 `;
 const Paragraph = styled.p`
+  margin-top: 50px;
   color: white;
   margin: 10px;
 `;
@@ -123,7 +138,6 @@ function SignUp() {
   const navigate = useNavigate();
 
   const [user, setUser] = useState({ id: "", email: "", password: "" });
-
   function onChangeInput(e) {
     const { name, value } = e.target;
     setUser({
@@ -131,6 +145,7 @@ function SignUp() {
       [name]: value,
     });
     console.log(user);
+  
   }
   function navigateToLogin() {
     navigate("/");
@@ -142,7 +157,12 @@ function SignUp() {
       email: user.email,
       password: user.password,
     });
+    navigate("/survey");
   };
+  const Login = () => {
+    navigate("/");
+  };
+ 
 
   return (
     <Wrapper>
@@ -185,7 +205,8 @@ function SignUp() {
         <Button onClick={createAccount}>Create Account</Button>
         <ParagraphContainer>
           <Paragraph>Already have an account?</Paragraph>
-          <Paragraph onClick={navigateToLogin}>Sign in</Paragraph>
+
+          <Button2 onClick={Login}>Login</Button2>
         </ParagraphContainer>
       </Container>
     </Wrapper>

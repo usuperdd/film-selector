@@ -6,6 +6,8 @@ import UsernameImg from "../images/username.png";
 import EmailImg from "../images/email.jpeg";
 import PasswordImg from "../images/password.png";
 import { useNavigate } from "react-router-dom";
+import firebaseConfigs from "../config/firebase";
+import { doc, setDoc } from "firebase/firestore/lite";
 
 const Wrapper = styled.div`
   height: 100vh;
