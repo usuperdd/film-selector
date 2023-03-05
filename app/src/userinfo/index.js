@@ -121,6 +121,9 @@ function UserInfo() {
   const navigate = useNavigate();
   function navigateToLogin() {
     navigate("/");
+    const Yourwatchlist = () => {
+      navigate("/survey");
+    };
   }
   return (
     <Wrapper>
