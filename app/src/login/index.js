@@ -132,8 +132,18 @@ function Login() {
       ) {
         const surveyRef = doc(db, "surveys", user.id);
         const surveySnap = await getDoc(surveyRef);
-        // i;
-        navigate("/survey", { state: user.id });
+        const surveys = surveySnap.data();
+        if (surveys == undefined) {
+          navigate("/survey", { state: user.id });
+        } else {
+          let actions = Object.keys(surveys);
+          let images = [];
+          actions.forEach((action) => {
+            images.push({ image: action, isCliked: true });
+          });
+
+          navigate("/main", { state: { userId: user.id, images: images } });
+        }
       } else {
         alert("Wrong id/password");
       }

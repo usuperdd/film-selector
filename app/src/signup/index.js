@@ -160,7 +160,7 @@ function SignUp() {
       email: user.email,
       password: user.password,
     });
-    navigate("/survey");
+    navigate("/survey", { state: user.id });
   };
   const Login = () => {
     navigate("/");
