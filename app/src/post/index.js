@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate, useLocation } from "react-router-dom";
+import { collection, getDocs } from "firebase/firestore/lite";
+import firebaseConfigs from "../config/firebase";
 
 import FooterImg from "../images/footer.jpeg";
 import ProfileImg from "../images/profile.png";
@@ -81,9 +83,19 @@ const Warnings = styled.div`
 `;
 
 function Post() {
+  const db = firebaseConfigs.db;
   const location = useLocation();
-  const userId = location.state.userId;
-  console.log(userId);
+  const userName = location.state.userId;
+
+  const [postId, setPostId] = useState();
+  useEffect(async () => {
+    const postsRef = await getDocs(collection(db, "posts"));
+    console.log(postsRef.docs);
+    const postLength = postsRef.docs.length + 1;
+  }, [postId]);
+
+  console.log(postId);
+  // con
   return (
     <Wrapper>
       <Header>
