@@ -51,7 +51,7 @@ function App() {
       <Route exact path="/community" element={<Community />} />
       <Route exact path="/userinfo" element={<Userinfo />} />
       <Route exact path="/post" element={<Post />} />
-      <Route exact path="/details" element={<Postdetails />} />
+      <Route exact path="/postdetails" element={<Postdetails />} />
       <Route exact path="/movie/sf/starwars" element={<StarWars />} />
       <Route exact path="/movie/sf/alien" element={<Alien />} />
       <Route
