@@ -155,12 +155,14 @@ function SignUp() {
   }
 
   const createAccount = async () => {
+    if(user.id != "" && user.email != "" && user.password != ""){
     await setDoc(doc(db, "members", user.id), {
       id: user.id,
       email: user.email,
       password: user.password,
     });
     navigate("/survey");
+  }
   };
   const Login = () => {
     navigate("/");
