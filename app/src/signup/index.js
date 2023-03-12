@@ -8,7 +8,6 @@ import PasswordImg from "../images/password.png";
 import { useNavigate } from "react-router-dom";
 import firebaseConfigs from "../config/firebase";
 import { doc, setDoc } from "firebase/firestore/lite";
-import { user } from "firebase/firestore/lite";
 
 const Wrapper = styled.div`
   height: 100vh;
@@ -155,14 +154,14 @@ function SignUp() {
   }
 
   const createAccount = async () => {
-    if(user.id != "" && user.email != "" && user.password != ""){
-    await setDoc(doc(db, "members", user.id), {
-      id: user.id,
-      email: user.email,
-      password: user.password,
-    });
-    navigate("/survey");
-  }
+    if (user.id != "" && user.email != "" && user.password != "") {
+      await setDoc(doc(db, "members", user.id), {
+        id: user.id,
+        email: user.email,
+        password: user.password,
+      });
+      navigate("/survey");
+    }
   };
   const Login = () => {
     navigate("/");

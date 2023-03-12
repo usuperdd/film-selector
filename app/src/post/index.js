@@ -3,12 +3,10 @@ import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate, useLocation } from "react-router-dom";
-import { collection, getDocs } from "firebase/firestore/lite";
+import { collection, getDocs, doc, setDoc } from "firebase/firestore/lite";
 import firebaseConfigs from "../config/firebase";
 import FooterImg from "../images/footer.jpeg";
 import ProfileImg from "../images/profile.png";
-import { doc, setDoc } from "firebase/firestore/lite";
-import { postdoc } from "firebase/firestore/lite";
 
 const Wrapper = styled.div`
   height: 100%;
@@ -87,39 +85,37 @@ function Post() {
   const db = firebaseConfigs.db;
   const location = useLocation();
   const userName = location.state.userId;
+  console.log(userName);
   const navigate = useNavigate();
-
-  
-  
-
   const [postId, setPostId] = useState();
+
   useEffect(async () => {
     const postsRef = await getDocs(collection(db, "posts"));
-    console.log(postsRef.docs);
+    console.log(userName);
+    console.log(postsRef.docs.length);
     const postLength = postsRef.docs.length + 1;
+    setPostId(postLength);
   }, [postId]);
 
   console.log(postId);
-  // con
-  const [postdoc, setpostdoc ] = useState({ contents: "", title: ""});
+
+  const [post, setPost] = useState({ contents: "", title: "" });
   function onChangeInput(e) {
     const { name, value } = e.target;
-    setpostdoc({
-      ...postdoc,
+    setPost({
+      ...post,
       [name]: value,
     });
-    console.log(postdoc);
   }
-  const EnrollButton = async () => {
+  const navigateToDetails = async () => {
     await setDoc(doc(db, "posts", postId), {
-      title: postdoc.title,
-      contents: postdoc.contents,
-      writer: userName
+      title: post.title,
+      contents: post.contents,
+      writer: userName,
     });
     navigate("/postdetails");
-  }
-    
-  
+  };
+
   return (
     <Wrapper>
       <Header>
@@ -127,18 +123,20 @@ function Post() {
       </Header>
       <Body>
         <MainContainer>
-          <TitleInput placeholder="Title"
+          <TitleInput
+            placeholder="Title"
             name="title"
-            value={postdoc.title}
+            value={post.title}
             onChange={onChangeInput}
           />
-          <ContentsInput placeholder="Contents"
+          <ContentsInput
+            placeholder="Contents"
             name="contents"
-            value={postdoc.contents}
+            value={post.contents}
             onChange={onChangeInput}
           />
         </MainContainer>
-        <EnrollButton onClick={EnrollButton}>Enroll</EnrollButton>
+        <EnrollButton onClick={navigateToDetails}>Enroll</EnrollButton>
         <Warnings>
           You can upload up to 20 MB of image files and up to 50 files. Videos
           can be uploaded in MP4, AVI, MOV, WEBM, etc. formats, up to 50 MB or 3
