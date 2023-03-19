@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { useNavigate, useLocation } from "react-router-dom";
 import FooterImg from "../images/footer.jpeg";
 import ProfileImg from "../images/profile.png";
 import EmailImg from "../images/email.jpeg";
@@ -103,6 +103,9 @@ const DeleteButton = styled.div`
   margin-left: auto;
 `;
 function Postdetails() {
+  const location = useLocation();
+  const postId = location.state.postId;
+  console.log(postId);
   return (
     <Wrapper>
       <Header>

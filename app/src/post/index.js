@@ -121,7 +121,7 @@ function Post() {
       writer: userName,
       createdAt: serverTimestamp(),
     });
-    navigate("/postdetails");
+    navigate("/postdetails", { state: { postId: postId } });
   };
 
   return (
