@@ -7,7 +7,6 @@ import FooterImg from "../images/footer.jpeg";
 import ProfileImg from "../images/profile.png";
 import EmailImg from "../images/email.jpeg";
 
-
 const Wrapper = styled.div`
   height: 100%;
   background-color: #001f3f;
@@ -116,7 +115,7 @@ function Postdetails() {
           <Heading>Writer | Date</Heading>
           <Heading2>Views | Recommendation | Comments</Heading2>
         </MainContainer>
-        <CommentsContainer>
+        {/* <CommentsContainer>
           <CommentWriterContainer>
             <WriteProfileImg src={EmailImg} />
             Writer
@@ -138,7 +137,7 @@ function Postdetails() {
           </CommentWriterContainer>
           <CommentsText>ddd</CommentsText>
           <DeleteButton> X </DeleteButton>
-        </CommentsContainer2>
+        </CommentsContainer2> */}
       </Body>
     </Wrapper>
   );
