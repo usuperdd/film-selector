@@ -3,7 +3,13 @@ import styled from "styled-components";
 import { Row, Col } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate, useLocation } from "react-router-dom";
-import { collection, getDocs, doc, setDoc } from "firebase/firestore/lite";
+import {
+  collection,
+  getDocs,
+  doc,
+  setDoc,
+  serverTimestamp,
+} from "firebase/firestore/lite";
 import firebaseConfigs from "../config/firebase";
 import FooterImg from "../images/footer.jpeg";
 import ProfileImg from "../images/profile.png";
@@ -108,10 +114,12 @@ function Post() {
     });
   }
   const navigateToDetails = async () => {
-    await setDoc(doc(db, "posts", postId), {
+    console.log(post);
+    await setDoc(doc(db, "posts", postId.toString()), {
       title: post.title,
       contents: post.contents,
       writer: userName,
+      createdAt: serverTimestamp(),
     });
     navigate("/postdetails");
   };
